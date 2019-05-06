@@ -1,0 +1,29 @@
+.printAre .col-md-4 {
+ width: 30% !important;
+}
+
+.printAre .col-md-8{
+  width: 70% !important;
+}
+
+#printThisBtn {
+    display: none
+}
+
+.videoIfAny {
+    display: none
+}
+
+.printAre img {
+width : 200px;
+height : 180px;
+
+}
+.printAre .form-group {
+    margin-bottom: 0px;
+}
+
+.printAre .form-group label,
+.printAre .form-group form-control-static {
+    font-size: 15px;
+}

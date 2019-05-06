@@ -1,0 +1,723 @@
+{% extends 'base.html' %}
+{% block title %} Print {% endblock %}
+
+{% block content %}
+
+<style>
+.printAre .form-group label,
+.printAre .form-group form-control-static {
+     font-size: 13px;
+}
+
+.printAre .form-group label{
+     font-weight: bold;
+     word-break: break-all;
+}
+
+
+</style>
+
+
+<div class="printAre card">
+    <div class="card-header">
+        <strong>PRINT FEEDBACK</strong>
+    </div>
+    <div class=" card-body card-block">
+        <form method="post" enctype="multipart/form-data">
+            {% for post in object_list %}
+
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">CLASS</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static">{{ post.CLASS_NAME}}</p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">SUBJECT</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.SUBJECT}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">NAME OF THE LESSON</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.NAME_OF_THE_LESSON}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INSTRUCTIONAL OBJECTIVE 1</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INSTRUCTIONAL_OBJECTIVE_1}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INSTRUCTIONAL OBJECTIVE 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INSTRUCTIONAL_OBJECTIVE_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INSTRUCTIONAL OBJECTIVE 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INSTRUCTIONAL_OBJECTIVE_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INSTRUCTIONAL OBJECTIVE 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INSTRUCTIONAL_OBJECTIVE_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INSTRUCTIONAL OBJECTIVE 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INSTRUCTIONAL_OBJECTIVE_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TEACHING_POINT_1</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TEACHING_POINT_1}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">DOMAIN</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.DOMAIN}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AREA_OF_INTEREST</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AREA_OF_INTEREST}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TYPE_OF_LEARNING_ACTIVITY_1</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TYPE_OF_LEARNING_ACTIVITY_1}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING_ACTIVITY</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_ACTIVITY}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">STUDENTS_EXPERIENCE_VISUAL</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.STUDENTS_EXPERIENCE_VISUAL}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AUDITORY</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AUDITORY}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">FINE_MOTOR</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.FINE_MOTOR}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">GROSS_MOTOR</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.GROSS_MOTOR}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INTELLIGENCE_USED</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INTELLIGENCE_USED}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">IMAGE IF ANY</label>
+                </div>
+                <div class="col-md-8">
+                    <img class="upimg img-fluid rounded mx-auto d-block" src="{{ post.IMAGE_IF_ANY.url}}"
+                         alt="{{ post.CLASS_NAME }}"/>
+                </div>
+            </div>
+
+            <div class="videoIfAny row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">VIDEO LINK IF ANY</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{post.VIDEO_LINK_IF_ANY}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING MATERIAL USED</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_MATERIAL_USED}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">ASSESSMENT OF LEARNING ACTIVITY</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.ASSESSMENT_OF_LEARNING_ACTIVITY}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TEACHING POINT 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TEACHING_POINT_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">DOMAIN 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.DOMAIN_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AREA OF INTEREST 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AREA_OF_INTEREST_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TYPE OF LEARNING ACTIVITY 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TYPE_OF_LEARNING_ACTIVITY_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING ACTIVITY 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_ACTIVITY_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">STUDENTS EXPERIENCE VISUAL 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.STUDENTS_EXPERIENCE_VISUAL_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AUDITORY 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AUDITORY_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">FINE MOTOR 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.FINE_MOTOR_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">GROSS MOTOR 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.GROSS_MOTOR_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INTELLIGENCE USED 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INTELLIGENCE_USED_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">IMAGE IF ANY</label>
+                </div>
+                <div class="col-md-8">
+                    <img class="upimg img-fluid rounded mx-auto d-block" src="{{ post.IMAGE_IF_ANY_2.url}}"
+                         alt="{{ post.CLASS_NAME }}"/>
+                </div>
+            </div>
+            <div class="videoIfAny row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">VIDEO LINK IF ANY 2</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{post.VIDEO_LINK_IF_ANY_2}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING MATERIAL USED 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_MATERIAL_USED_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">ASSESSMENT OF LEARNING ACTIVITY 2</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.ASSESSMENT_OF_LEARNING_ACTIVITY_2}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TEACHING POINT 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TEACHING_POINT_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">DOMAIN 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.DOMAIN_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AREA OF INTEREST 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AREA_OF_INTEREST_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TYPE OF LEARNING ACTIVITY 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TYPE_OF_LEARNING_ACTIVITY_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING ACTIVITY 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_ACTIVITY_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">STUDENTS EXPERIENCE VISUAL 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.STUDENTS_EXPERIENCE_VISUAL_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AUDITORY 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AUDITORY_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">FINE MOTOR 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.FINE_MOTOR_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">GROSS MOTOR 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.GROSS_MOTOR_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INTELLIGENCE USED 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INTELLIGENCE_USED_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">IMAGE IF ANY</label>
+                </div>
+                <div class="col-md-8">
+                    <img class="upimg img-fluid rounded mx-auto d-block" src="{{ post.IMAGE_IF_ANY_3.url}}"
+                         alt="{{ post.CLASS_NAME }}"/>
+                </div>
+            </div>
+            <div class="videoIfAny row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">VIDEO LINK IF ANY 3</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{post.VIDEO_LINK_IF_ANY_3}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING MATERIAL USED 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_MATERIAL_USED_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">ASSESSMENT OF LEARNING ACTIVITY 3</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.ASSESSMENT_OF_LEARNING_ACTIVITY_3}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TEACHING POINT 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TEACHING_POINT_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">DOMAIN 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.DOMAIN_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AREA OF INTEREST 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AREA_OF_INTEREST_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TYPE OF LEARNING ACTIVITY 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TYPE_OF_LEARNING_ACTIVITY_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TYPE OF LEARNING ACTIVITY 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_ACTIVITY_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">STUDENTS EXPERIENCE VISUAL 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.STUDENTS_EXPERIENCE_VISUAL_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AUDITORY 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AUDITORY_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">FINE MOTOR 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.FINE_MOTOR_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">GROSS MOTOR 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.GROSS_MOTOR_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INTELLIGENCE USED 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INTELLIGENCE_USED_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">IMAGE IF ANY</label>
+                </div>
+                <div class="col-md-8">
+                    <img class="upimg img-fluid rounded mx-auto d-block" src="{{ post.IMAGE_IF_ANY_4.url}}"
+                         alt="{{ post.CLASS_NAME }}"/>
+                </div>
+            </div>
+            <div class="videoIfAny row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">VIDEO LINK IF ANY 4</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{post.VIDEO_LINK_IF_ANY_4}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING MATERIAL USED 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_MATERIAL_USED_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">ASSESSMENT OF LEARNING ACTIVITY 4</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.ASSESSMENT_OF_LEARNING_ACTIVITY_4}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TEACHING POINT 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TEACHING_POINT_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">DOMAIN 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.DOMAIN_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AREA OF INTEREST 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AREA_OF_INTEREST_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">TYPE OF LEARNING ACTIVITY 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.TYPE_OF_LEARNING_ACTIVITY_5 }} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING ACTIVITY 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_ACTIVITY_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">STUDENTS EXPERIENCE VISUAL 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.STUDENTS_EXPERIENCE_VISUAL_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">AUDITORY 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.AUDITORY_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">FINE MOTOR 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.FINE_MOTOR_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">GROSS MOTOR 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.GROSS_MOTOR_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">INTELLIGENCE USED 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.INTELLIGENCE_USED_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">IMAGE IF ANY</label>
+                </div>
+                <div class="col-md-8">
+                    <img class="upimg img-fluid rounded mx-auto d-block" src="{{ post.IMAGE_IF_ANY_5.url}}"
+                         alt="{{ post.CLASS_NAME }}"/>
+                </div>
+            </div>
+            <div class="videoIfAny row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">VIDEO LINK IF ANY 5</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{post.VIDEO_LINK_IF_ANY_5}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">LEARNING MATERIAL USED 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.LEARNING_MATERIAL_USED_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">ASSESSMENT OF LEARNING ACTIVITY 5</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.ASSESSMENT_OF_LEARNING_ACTIVITY_5}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">HOMEWORK</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.HOMEWORK}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">COMMENTS</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.COMMENTS}} </p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label class=" form-control-label">STATUS</label>
+                </div>
+                <div class="col-md-8">
+                    <p class="form-control-static"> {{ post.STATUS}} </p>
+                </div>
+            </div>
+
+            <button id="printThisBtn" type="button" class="btn btn-primary btn-sm">
+                <i class="fas fa-print"></i> Print
+            </button>
+
+            {% endfor %}
+        </form>
+    </div>
+</div>
+<div>
+</div>
+
+
+{% endblock %}
