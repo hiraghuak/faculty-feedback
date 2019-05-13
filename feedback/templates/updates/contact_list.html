@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %} Feedback List {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+
+
+<form method="post" enctype="multipart/form-data">
+<div class="table-responsive table--no-card m-b-30">
+    <table class="table table-borderless table-striped table-earning">
+        <thead>
+        <tr>
+            <th>SL No</th>
+            <th>Name</th>
+            <th>Action</th>
+             <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for contactDetails in object_list %}
+        {% csrf_token %}
+        <tr>
+
+             <td>{{ contactDetails.author }}</td>
+            <td>{{ contactDetails.NAME_OF_THE_LESSON }}</td>
+            <td>{{ contactDetails.SUBJECT }}</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="{% url 'contact_detail'  contactDetails.id  %}">
+                    <i class="fas fa-print"></i></a>
+                <a class="btn btn-primary btn-sm" href="{% url 'contact_update'  contactDetails.id  %}">
+                    <i class="far fa-edit"></i></a>
+                <a class="btn btn-danger btn-sm" href="{% url 'contact_delete'  contactDetails.id  %}">
+                    <i class="far fa-trash-alt"></i></a>
+            </td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+
+
+
+    </table>
+</div>
+</form>
+
+
+
+{% endblock %}

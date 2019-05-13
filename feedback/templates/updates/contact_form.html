@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% block title %} Edit Generic LP {% endblock %}
 
 {% block content %}
 
@@ -121,14 +122,24 @@ display: block;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.backBtn{
+        position: fixed;
+        z-index: 13;
+        right: 5%;
+}
+
 </style>
 
-
+<div class="backBtn clearfix">
+    <a href="{% url 'contact_list' %}" class="btn btn-primary btn-sm float-right m-b-10">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+</div>
 
 
 <div class="card">
     <div class="card-header">
-        <strong>Create Generic LP </strong>
+        <strong>Edit Generic LP</strong>
     </div>
     <div class="card-body card-block">
         <form method="post" enctype="multipart/form-data">
@@ -542,5 +553,4 @@ display: block;
         </form>
     </div>
 </div>
-
 {% endblock %}

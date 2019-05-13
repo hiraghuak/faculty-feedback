@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Feedback List {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1>Feedback Delete?</h1>
+
+<form method="post">
+    {% csrf_token %}
+    Are you sure you want to delete this Feedback?
+    <input class="btn btn-danger" type="submit" value="Submit"/>
+</form>
+
+{% endblock %}

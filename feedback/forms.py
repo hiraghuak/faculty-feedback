@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Contact
 
 
 class PostForm(forms.ModelForm):
@@ -8,3 +8,8 @@ class PostForm(forms.ModelForm):
 
         fields = "__all__"
 
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = "__all__"
