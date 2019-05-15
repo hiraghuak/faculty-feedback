@@ -11,8 +11,8 @@ from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.http import HttpRequest
 
-from .forms import PostForm, ContactForm
-from .models import Post, Contact
+from .forms import PostForm
+from .models import Post
 
 
 class HomePageView(ListView):

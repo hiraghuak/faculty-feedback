@@ -7,31 +7,31 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 CLASS_CHOICES = (
-    ('1 Icse ', '1 Icse '),
-    ('1 Cbse', '1 Cbse'),
-    ('2 Icse', '2 Icse'),
-    ('2 Cbse', '2 Cbse'),
-    ('3 Icse', '3 Icse'),
-    ('3A Cbse', '3A Cbse'),
-    ('3B Cbse', '3B Cbse'),
-    ('4A Icse', '4A Icse'),
-    ('4B Icse', '4B Icse'),
-    ('4 Cbse', '4 Cbse'),
-    ('5A Icse', '5A Icse'),
-    ('5B Icse', '5B Icse'),
-    ('5 Cbse', '5 Cbse'),
-    ('6A Icse', '6A Icse'),
-    ('6B Icse', '6B Icse'),
-    ('6 Cbse', '6 Cbse'),
-    ('7A Icse', '7A Icse'),
-    ('7B Icse', '7B Icse'),
-    ('7 Cbse', '7 Cbse'),
-    ('8 Icse', '8 Icse'),
-    ('8 Cbse', '8 Cbse'),
-    ('9 Icse', '9 Icse'),
-    ('9 Cbse', '9 Cbse'),
-    ('10 Icse', '10 Icse'),
-    ('10 Cbse', '10 Cbse')
+    ('1 ICSE ', '1 ICSE '),
+    ('1 CBSE', '1 CBSE'),
+    ('2 ICSE', '2 ICSE'),
+    ('2 CBSE', '2 CBSE'),
+    ('3 ICSE', '3 ICSE'),
+    ('3A CBSE', '3A CBSE'),
+    ('3B CBSE', '3B CBSE'),
+    ('4A ICSE', '4A ICSE'),
+    ('4B ICSE', '4B ICSE'),
+    ('4 CBSE', '4 CBSE'),
+    ('5A ICSE', '5A ICSE'),
+    ('5B ICSE', '5B ICSE'),
+    ('5 CBSE', '5 CBSE'),
+    ('6A ICSE', '6A ICSE'),
+    ('6B ICSE', '6B ICSE'),
+    ('6 CBSE', '6 CBSE'),
+    ('7A ICSE', '7A ICSE'),
+    ('7B ICSE', '7B ICSE'),
+    ('7 CBSE', '7 CBSE'),
+    ('8 ICSE', '8 ICSE'),
+    ('8 CBSE', '8 CBSE'),
+    ('9 ICSE', '9 ICSE'),
+    ('9 CBSE', '9 CBSE'),
+    ('10 ICSE', '10 ICSE'),
+    ('10 CBSE', '10 CBSE')
 )
 
 SUBJECT_CHOICES = (
@@ -171,52 +171,58 @@ class Post(models.Model):
 
     SUBJECT = models.CharField(max_length=150, choices=SUBJECT_CHOICES, default='', blank=True)
     NAME_OF_THE_LESSON = models.CharField(max_length=500, default='', blank=True)
+
     # FROM_DATE = models.DateField(default=datetime.date.today)
     # TO_DATE = models.DateField(default=datetime.date.today)
+
+    AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='AGE', blank=False)
     INSTRUCTIONAL_OBJECTIVE_1 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500, default='', blank=True)
+    # INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=500, default='', blank=True)
+    # INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=500, default='', blank=True)
+    # INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500, default='', blank=True)
+    # INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500, default='', blank=True)
+
+    STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150,
+                                                  choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='1', blank=False)
+
+    AUDITORY = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
+    FINE_MOTOR = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
+    GROSS_MOTOR = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='', blank=True)
 
     # TEACHING_POINT_1
     TEACHING_POINT_1 = models.CharField(max_length=500, default='', blank=True)
     DOMAIN = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='AGE', blank=False)
     TYPE_OF_LEARNING_ACTIVITY_1 = models.CharField(max_length=150,
                                                    choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='Choose',
                                                    blank=True)
     LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
-    STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150,
-                                                  choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='1', blank=False)
-    AUDITORY = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
-    FINE_MOTOR = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
-    GROSS_MOTOR = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='', blank=True)
+
     INTELLIGENCE_USED = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
+
     IMAGE_IF_ANY = models.ImageField(upload_to='images/', default='', blank=True)
     VIDEO_LINK_IF_ANY = models.CharField(max_length=1500, default='', blank=True)
     LEARNING_MATERIAL_USED = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
 
     # TEACHING_POINT_2
-    TEACHING_POINT_2 = models.CharField(max_length=500, default='', blank=True)
-    DOMAIN_2 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    AREA_OF_INTEREST_2 = MultiSelectField(choices=AREA_OF_INTEREST_2, default='', blank=False)
-    TYPE_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=150,
-                                                   choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='Choose',
-                                                   blank=True)
-    LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='')
-    STUDENTS_EXPERIENCE_VISUAL_2 = models.CharField(max_length=150,
-                                                    choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='',
-                                                    blank=False)
-    AUDITORY_2 = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
-    FINE_MOTOR_2 = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
-    GROSS_MOTOR_2 = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='')
-    INTELLIGENCE_USED_2 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
-    IMAGE_IF_ANY_2 = models.ImageField(upload_to='images/', default='', blank=True)
-    VIDEO_LINK_IF_ANY_2 = models.CharField(max_length=1500, default='', blank=True)
-    LEARNING_MATERIAL_USED_2 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
-    ASSESSMENT_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
+    # TEACHING_POINT_2 = models.CharField(max_length=500, default='', blank=True)
+    # DOMAIN_2 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
+    # AREA_OF_INTEREST_2 = MultiSelectField(choices=AREA_OF_INTEREST_2, default='', blank=False)
+    # TYPE_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=150,
+    #                                               choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='Choose',
+    #                                               blank=True)
+    # LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='')
+    # STUDENTS_EXPERIENCE_VISUAL_2 = models.CharField(max_length=150,
+    #                                                 choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='',
+    #                                                 blank=False)
+    # AUDITORY_2 = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
+    # FINE_MOTOR_2 = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
+    # GROSS_MOTOR_2 = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='')
+    # INTELLIGENCE_USED_2 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
+    # IMAGE_IF_ANY_2 = models.ImageField(upload_to='images/', default='', blank=True)
+    # VIDEO_LINK_IF_ANY_2 = models.CharField(max_length=1500, default='', blank=True)
+    # LEARNING_MATERIAL_USED_2 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
+    # ASSESSMENT_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
 
     HOMEWORK = models.TextField(blank=True)
 
@@ -231,12 +237,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.CLASS_NAME
-
-
-class Contact(models.Model):
-    name = models.CharField(max_length=100, default='')
-    address = models.CharField(max_length=100, default='')
-    phone = models.CharField(max_length=50, default='')
-
-    def __str__(self):
-        return self.name
