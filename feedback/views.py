@@ -1,14 +1,15 @@
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, CreateView, DetailView
 
+from django.contrib import admin
+
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.views.generic import TemplateView
 
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect
 
 from django.urls import reverse_lazy
-from django.shortcuts import render
 from django.http import HttpRequest
 
 from .forms import PostForm
@@ -37,6 +38,11 @@ def my_view(request):
 class FeedbackList(ListView):
     model = Post
     template_name = 'updates/contact_list.html'
+    #
+    # def get_queryset(self, **kwargs):
+    #     author = self.request.user
+    #     object_list = Post.objects.filter(author=author)
+    #     return Post.objects.filter(object_list=object_list)
 
 
 class FeedbackDetail(DetailView):

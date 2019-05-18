@@ -229,11 +229,7 @@ class Post(models.Model):
     COMMENTS = models.TextField(blank=True)
     STATUS = models.CharField(max_length=150, choices=STATUS_CHOICES, default='', blank=True)
 
-    author = models.OneToOneField(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        default='',
-    )
+    author = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.CLASS_NAME
