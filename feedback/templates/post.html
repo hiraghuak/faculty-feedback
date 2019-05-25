@@ -134,267 +134,292 @@ display: block;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 </style>
+
+
+{% if messages %}
+<div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+    {% for message in messages %}
+    <span %} %} class="{{ message.tags }}" endif if message.tags {% {%>{{ message }}</span>
+    {% endfor %}
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">×</span>
+    </button>
+</div>
+{% endif %}
 
 
 <div class="card">
     <div class="card-header">
-        <strong>Create Generic LP </strong>
+        <strong>Create Generic </strong>
     </div>
     <div class="card-body card-block">
 
 
-        <form class="form-horizontal" method="POST" action="" enctype="multipart/form-data">
+        <form class="form-horizontal" enctype="multipart/form-data" method="POST">
             {% csrf_token %}
 
-            {{ formset.management_form }}
+            <!--{{ form.as_p }}-->
+            <!--{{ form | crispy }}-->
 
-            <div class="formfirstpart">
+            <div class="div">
+                <div class="formfirstpart">
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label"> Class</label>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            {{form.CLASS_NAME}}
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Subject</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.SUBJECT}}</p>
-                    </div>
-                </div>
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label"> Name of the Lesson</label>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            {{form.NAME_OF_THE_LESSON}}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="test">
-
-                    <div class="row form-group form-row ">
-
+                    <div class="row form-group">
                         <div class="col-md-4">
-                            <label>Instructional Objective</label>
+                            <label class=" form-control-label"> Class</label>
                         </div>
-
                         <div class="col-md-8">
+                            <div class="form-group">
+                                {{form.CLASS_NAME}}
+                            </div>
+                        </div>
+                    </div>
 
-                            <div class="input-group mb-3 ddfrw">
-                                {{form.INSTRUCTIONAL_OBJECTIVE_1}}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Subject</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.SUBJECT}}</p>
+                        </div>
+                    </div>
 
-                                <!--                            <input type="text" class="form-control">-->
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label"> Name of the Lesson</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{form.NAME_OF_THE_LESSON}}
+                            </div>
+                        </div>
+                    </div>
 
-                                <div class="input-group-append">
-                                    <button class="btn btn-success add-form-row">+</button>
+                    <div class="test">
+
+                        <div class="row form-group form-row ">
+
+                            <div class="col-md-4">
+                                <label>Instructional Objective</label>
+                            </div>
+
+                            <div class="col-md-8">
+
+                                <div class="input-group mb-3 ddfrw">
+                                    {{form.INSTRUCTIONAL_OBJECTIVE_1}}
+
+                                    <!-- <input type="text" class="form-control"> -->
+
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success add-form-row">+</button>
+                                    </div>
                                 </div>
+
                             </div>
 
                         </div>
-
                     </div>
-                </div>
 
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Are of Interest</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.AREA_OF_INTEREST}}</p>
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Students Experience Visual</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.STUDENTS_EXPERIENCE_VISUAL}}</p>
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Intelligence Used</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.INTELLIGENCE_USED}}</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="teachingPoint">
-                <h3 class="center">Teaching Point</h3>
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Teaching Point 1</label>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            {{form.TEACHING_POINT_1}}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Are of Interest</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.AREA_OF_INTEREST}}</p>
                         </div>
                     </div>
-                </div>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Students Experience Visual</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.STUDENTS_EXPERIENCE_VISUAL}}</p>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Intelligence Used</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.INTELLIGENCE_USED}}</p>
+                        </div>
+                    </div>
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Type of Learning Activity </label>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Auditory</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.AUDITORY}}</p>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_1}}</p>
-                    </div>
-                </div>
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Domain</label>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Fine Motor</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.FINE_MOTOR}}</p>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.DOMAIN}}</p>
-                    </div>
-                </div>
 
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Gross Motor</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.GROSS_MOTOR}}</p>
+                        </div>
+                    </div>
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Learning Activity Details*</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.LEARNING_ACTIVITY}}</p>
-                    </div>
-                </div>
-
-
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Auditory</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.AUDITORY}}</p>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Fine Motor</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.FINE_MOTOR}}</p>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Gross Motor</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.GROSS_MOTOR}}</p>
-                    </div>
                 </div>
 
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Image If Any</label>
+                <div class="teachingPoint">
+                    <h3 class="center">Teaching Point</h3>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Teaching Point 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{form.TEACHING_POINT_1}}
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        {{form.IMAGE_IF_ANY}}
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Type of Learning Activity </label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_1}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Domain</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.DOMAIN}}</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Activity Details*</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Image If Any</label>
+                        </div>
+                        <div class="col-md-8">
+                            {{form.IMAGE_IF_ANY}}
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Video Link If Any</label>
+                        </div>
+                        <div class="col-md-8">
+                            {{form.VIDEO_LINK_IF_ANY}}
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Material Used</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Assessment of Learning Activity</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY}}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-right ">
+
+
+                        <button class=" btn btn-primary btn-sm remove-Techingpoint">
+                            <i class="far fa-plus-square"></i> Remove
+                        </button>
+
+                        <button class=" btn btn-primary btn-sm addteachingpoint">
+                            <i class="far fa-plus-square"></i> Add Teaching Point
+                        </button>
                     </div>
                 </div>
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Video Link If Any</label>
-                    </div>
-                    <div class="col-md-8">
-                        {{form.VIDEO_LINK_IF_ANY}}
-                    </div>
-                </div>
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Learning Material Used</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED}}</p>
-                    </div>
-                </div>
+                <div class="teachingPoint3">
 
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Assessment of Learning Activity</label>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">HomeWork</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.HOMEWORK}}</p>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY}}</p>
-                    </div>
-                </div>
 
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Comments</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.COMMENTS}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Status</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{form.STATUS}}</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12 text-right ">
-
-
-                    <button class=" btn btn-primary btn-sm remove-Techingpoint">
-                        <i class="far fa-plus-square"></i> Remove
-                    </button>
-
-                    <button class=" btn btn-primary btn-sm addteachingpoint">
-                        <i class="far fa-plus-square"></i> Add Teaching Point
-                    </button>
-                </div>
-            </div>
-
-
-            <div class="teachingPoint3">
-
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">HomeWork</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.HOMEWORK}}</p>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Comments</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.COMMENTS}}</p>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-4">
-                        <label class=" form-control-label">Status</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p class="form-control-static"> {{form.STATUS}}</p>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- {{ form | crispy }} -->
-
-            <button type="submit" class="btn btn-primary btn-sm">
+            <button class="btn btn-primary btn-sm" type="submit">
                 <i class="fas fa-save"></i> Submit
             </button>
+
         </form>
     </div>
 </div>

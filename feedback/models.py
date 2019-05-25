@@ -1,5 +1,6 @@
-from django.db import models
 from django.conf import settings
+from django.db import models
+from django.utils import timezone
 import datetime
 from multiselectfield import MultiSelectField
 from django.contrib.auth.models import User
@@ -142,12 +143,33 @@ INTELLIGENCE_USED_CHOICES = (
 
 LEARNING_MATERIAL_USED_CHOICES = (
     ('Whiteboard', 'Whiteboard'),
-    ('Laptop with Projector', 'Laptop with Projector'),
+    ('Laptop With Projector', 'Laptop With Projector'),
     ('Model From Lab', 'Model From Lab'),
     ('Live Model', 'Live Model'),
     ('Magnets', 'Magnets'),
     ('Electrical Circuits', 'Electrical Circuits'),
     ('Charts', 'Charts'),
+    ('Glass Slab', 'Glass Slab'),
+    ('Prism', 'Prism'),
+    ('Materials Around Them', 'Materials Around Them'),
+    ('Flash Cards', 'lash Cards'),
+    ('Dictionary', 'Dictionary'),
+    ('Textbook/sm/hm', 'Textbook/sm/hm'),
+    ('Beads/abacus', 'Beads/abacus'),
+    ('Lens / Mirrors', 'ens / Mirrors'),
+    ('Weighing Machines', 'Weighing Machines'),
+    ('Spirit Lamp', 'Spirit Lamp'),
+    ('Lab Glass Materials And Chemicals', 'Lab Glass Materials And Chemicals'),
+    ('Newspapaer Clip', 'Newspapaer Clip'),
+    ('Globe', 'Globe'),
+    ('Maps', 'Maps'),
+    ('Measurement Tapes', 'Measurement Tapes'),
+    ('Clock', 'Clock'),
+    ('Number Blocks', 'Number Blocks'),
+    ('Seeds', 'Seeds'),
+    ('Audio Players', 'Audio Players'),
+    ('Others', 'Others'),
+    ('Atlas', 'Atlas'),
 )
 
 STATUS_CHOICES = (
@@ -155,36 +177,31 @@ STATUS_CHOICES = (
     ('Edit and Resend', 'Edit and Resend'),
 )
 
+User = settings.AUTH_USER_MODEL
+
+
+class BlogPostQuerySet(models.QuerySet):
+    def published(self):
+        now = timezone.now()
+        return self.filter(publish_date__lte=now)
+
 
 class Post(models.Model):
-    # title = models.TextField()  # text Area
-    # name = models.CharField(max_length=500, default='')  # input
-    # cover = models.ImageField(upload_to='images/')  # file upload
-    # class_select = models.CharField(max_length=150, choices=CLASS_CHOICES, default='1_ICSE')  # Drop Down
-    # my_field = MultiSelectField(choices=SUBJECT_CHOICES, default='item_key1')  # multiple Choices
-    # display = models.CharField(max_length=1, choices=FAVORITE_COLORS_CHOICES, blank=True, =True)  # Drop Down
-
     # MAIN INPUT START
 
-    CLASS_NAME = models.CharField(
-        max_length=150, choices=CLASS_CHOICES, default='', blank=True)
+    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 
+    CLASS_NAME = models.CharField(max_length=150, choices=CLASS_CHOICES, default='', blank=True)
     SUBJECT = models.CharField(max_length=150, choices=SUBJECT_CHOICES, default='', blank=True)
-    NAME_OF_THE_LESSON = models.CharField(max_length=500, default='', blank=True)
+    NAME_OF_THE_LESSON = models.CharField(max_length=500, default='', blank=False)
 
     # FROM_DATE = models.DateField(default=datetime.date.today)
     # TO_DATE = models.DateField(default=datetime.date.today)
 
-    AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='AGE', blank=False)
+    AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='', blank=False)
     INSTRUCTIONAL_OBJECTIVE_1 = models.CharField(max_length=500, default='', blank=True)
-    # INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=500, default='', blank=True)
-    # INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=500, default='', blank=True)
-    # INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500, default='', blank=True)
-    # INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500, default='', blank=True)
-
     STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150,
-                                                  choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='1', blank=False)
-
+                                                  choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='', blank=False)
     AUDITORY = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
     FINE_MOTOR = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
     GROSS_MOTOR = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='', blank=True)
@@ -193,43 +210,24 @@ class Post(models.Model):
     TEACHING_POINT_1 = models.CharField(max_length=500, default='', blank=True)
     DOMAIN = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
     TYPE_OF_LEARNING_ACTIVITY_1 = models.CharField(max_length=150,
-                                                   choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='Choose',
+                                                   choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='',
                                                    blank=True)
     LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
-
     INTELLIGENCE_USED = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
-
     IMAGE_IF_ANY = models.ImageField(upload_to='images/', default='', blank=True)
     VIDEO_LINK_IF_ANY = models.CharField(max_length=1500, default='', blank=True)
     LEARNING_MATERIAL_USED = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
-
-    # TEACHING_POINT_2
-    # TEACHING_POINT_2 = models.CharField(max_length=500, default='', blank=True)
-    # DOMAIN_2 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    # AREA_OF_INTEREST_2 = MultiSelectField(choices=AREA_OF_INTEREST_2, default='', blank=False)
-    # TYPE_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=150,
-    #                                               choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='Choose',
-    #                                               blank=True)
-    # LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='')
-    # STUDENTS_EXPERIENCE_VISUAL_2 = models.CharField(max_length=150,
-    #                                                 choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='',
-    #                                                 blank=False)
-    # AUDITORY_2 = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
-    # FINE_MOTOR_2 = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
-    # GROSS_MOTOR_2 = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='')
-    # INTELLIGENCE_USED_2 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
-    # IMAGE_IF_ANY_2 = models.ImageField(upload_to='images/', default='', blank=True)
-    # VIDEO_LINK_IF_ANY_2 = models.CharField(max_length=1500, default='', blank=True)
-    # LEARNING_MATERIAL_USED_2 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
-    # ASSESSMENT_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
-
     HOMEWORK = models.TextField(blank=True)
-
     COMMENTS = models.TextField(blank=True)
     STATUS = models.CharField(max_length=150, choices=STATUS_CHOICES, default='', blank=True)
 
-    author = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
+    # publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
+    # timestamp = models.DateTimeField(auto_now_add=True)
+    # updated = models.DateTimeField(auto_now=True)
+    #
+    # class Meta:
+    #     ordering = ['-publish_date', '-updated', '-timestamp']
 
     def __str__(self):
         return self.CLASS_NAME

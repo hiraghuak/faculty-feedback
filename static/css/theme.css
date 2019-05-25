@@ -14639,3 +14639,12 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
+
+
+.alert-success {
+    position: fixed !important;
+    z-index: 99 !important;
+    width: 31% !important;
+    right: 1% !important;
+    box-shadow: 0px 2px 10px 2px #00000052 !important;
+}
