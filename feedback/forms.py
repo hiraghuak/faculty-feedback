@@ -28,12 +28,18 @@ from .models import Post
 #     STATUS = forms.CharField()
 #     publish_date = forms.CharField()
 
+AUDITORY_CHOICES = (
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+)
 
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         # fields = "__all__"
-        # NAME_OF_THE_LESSON = forms.CharField(widget=forms.Textarea)
         fields = [
             'CLASS_NAME',
             'SUBJECT',
@@ -44,6 +50,8 @@ class PostForm(forms.ModelForm):
             'AUDITORY',
             'FINE_MOTOR',
             'GROSS_MOTOR',
+
+            # TEACHING_POINT_1
             'TEACHING_POINT_1',
             'DOMAIN',
             'TYPE_OF_LEARNING_ACTIVITY_1',
@@ -56,7 +64,33 @@ class PostForm(forms.ModelForm):
             'HOMEWORK',
             'COMMENTS',
             'STATUS',
+
+            'INSTRUCTIONAL_OBJECTIVE_1',
+            'INSTRUCTIONAL_OBJECTIVE_2',
+            'INSTRUCTIONAL_OBJECTIVE_3',
+            'INSTRUCTIONAL_OBJECTIVE_4',
+            'INSTRUCTIONAL_OBJECTIVE_5',
+
+            # TEACHING_POINT_2
+            'TEACHING_POINT_2',
+            'DOMAIN_2',
+            'TYPE_OF_LEARNING_ACTIVITY_2',
+            'LEARNING_ACTIVITY_2',
+            'INTELLIGENCE_USED_2',
+            'IMAGE_IF_ANY_2',
+            'VIDEO_LINK_IF_ANY_2',
+            'LEARNING_MATERIAL_USED_2',
+            'ASSESSMENT_OF_LEARNING_ACTIVITY_2',
+            'publish_date',
         ]
+
+        # NAME_OF_THE_LESSON = forms.CharField(widget=forms.Textarea)
+        # widgets = {
+        #     'AUDITORY': forms.ChoiceField(attrs={
+        #   'type' : 'radio',
+        #   'class' : 'your_class'
+        #     },widget=forms.RadioSelect(),choices=AUDITORY_CHOICES)
+        # }
 
         # exclude = [
         #     'user',

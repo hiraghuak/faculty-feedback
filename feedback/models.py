@@ -174,7 +174,16 @@ LEARNING_MATERIAL_USED_CHOICES = (
 
 STATUS_CHOICES = (
     ('Approved', 'Approved'),
-    ('Edit and Resend', 'Edit and Resend'),
+    ('Review', 'Review'),
+    ('Pending', 'Pending'),
+)
+
+AUDITORY_CHOICES = (
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
 )
 
 User = settings.AUTH_USER_MODEL
@@ -198,11 +207,20 @@ class Post(models.Model):
     # FROM_DATE = models.DateField(default=datetime.date.today)
     # TO_DATE = models.DateField(default=datetime.date.today)
 
-    AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='', blank=False)
+    AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='', blank=True)
+
     INSTRUCTIONAL_OBJECTIVE_1 = models.CharField(max_length=500, default='', blank=True)
+    INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=500, default='', blank=True)
+    INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=500, default='', blank=True)
+    INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500, default='', blank=True)
+    INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500, default='', blank=True)
+
     STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150,
-                                                  choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='', blank=False)
+                                                  choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='', blank=True)
+
     AUDITORY = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
+
+
     FINE_MOTOR = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
     GROSS_MOTOR = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='', blank=True)
 
@@ -218,16 +236,37 @@ class Post(models.Model):
     VIDEO_LINK_IF_ANY = models.CharField(max_length=1500, default='', blank=True)
     LEARNING_MATERIAL_USED = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
+
+
+
+    # TEACHING_POINT_2
+    TEACHING_POINT_2 = models.CharField(max_length=500, default='', blank=True)
+    DOMAIN_2 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
+    TYPE_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=150,
+                                                   choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='',
+                                                   blank=True)
+    LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
+    INTELLIGENCE_USED_2 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
+    IMAGE_IF_ANY_2 = models.ImageField(upload_to='images/', default='', blank=True)
+    VIDEO_LINK_IF_ANY_2 = models.CharField(max_length=1500, default='', blank=True)
+    LEARNING_MATERIAL_USED_2 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
+    ASSESSMENT_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
+
+    # FINAL FORM
     HOMEWORK = models.TextField(blank=True)
     COMMENTS = models.TextField(blank=True)
-    STATUS = models.CharField(max_length=150, choices=STATUS_CHOICES, default='', blank=True)
+    STATUS = models.CharField(max_length=150, choices=STATUS_CHOICES, default='Pending', blank=True)
 
-    # publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
-    # timestamp = models.DateTimeField(auto_now_add=True)
-    # updated = models.DateTimeField(auto_now=True)
-    #
-    # class Meta:
-    #     ordering = ['-publish_date', '-updated', '-timestamp']
+    #Updateded Date&time
+    publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-publish_date', '-updated', '-timestamp']
 
     def __str__(self):
-        return self.CLASS_NAME
+        return str(self.user)
+
+
+

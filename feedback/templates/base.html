@@ -293,7 +293,7 @@
 $('#printThisBtn').on('click', () => {
     //console.log("click");
     $('.printAre').printThis({
-    debug: true,
+    debug: false,
     importCSS: true,
     importStyle: true,
     loadCSS: "{% static 'css/print.css' %}",
@@ -302,6 +302,18 @@ $('#printThisBtn').on('click', () => {
     });
 })
 
+</script>
+
+<script>
+$(function() {
+
+$('#faculty-update').on('click', function(){
+  console.log("its working");
+    $('.status_change select > option[value=Review]').prop('selected', false);
+    $('.status_change select > option[value=Pending]').prop('selected', true);
+});
+
+});
 </script>
 
 

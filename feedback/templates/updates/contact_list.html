@@ -4,16 +4,96 @@
 
 {% block content %}
 
+<style>
+.table thead th {
+    background-color: #555555;
+    color: #fff;
+}
+.Approved p{
+    background-color: #4CAF50;
+    padding: 0px 7px;
+    border-radius: 7px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 1px 2px 1px #0000002b;
+}
+.Review p{
+    background-color: #f44336;
+    padding: 0px 7px;
+    border-radius: 7px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 1px 2px 1px #0000002b;
+}
+.Pending p{
+    background-color: #FFEB3B;
+    padding: 0px 7px;
+    border-radius: 7px;
+    font-size: 12px;
+    text-align: center;
+    color: #555;
+    box-shadow: 0px 1px 2px 1px #0000002b;
+}
+</style>
 
-<form enctype="multipart/form-data" method="post">
-    <div class="table-responsive table--no-card m-b-30">
+{% if user.is_superuser %}
 
-        <table class="table table-borderless table-striped table-earning">
+    <form enctype="multipart/form-data" method="post">
+    <div class="table-responsive  table-condensed">
+
+        <table class="table table-borderless table-striped ">
             <thead>
             <tr>
-                <th>SL No</th>
-                <th>Name</th>
+
+                <th>User Name</th>
+                <th>Lesson</th>
+                <th>Subject</th>
+                <th>Created On</th>
+                <th>Status</th>
                 <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for contactDetailsall in object_all %}
+            {% csrf_token %}
+            <tr>
+                <td>{{ contactDetailsall.user }}</td>
+                <td>{{ contactDetailsall.NAME_OF_THE_LESSON }}</td>
+                <td>{{ contactDetailsall.SUBJECT }}</td>
+                <td>{{ contactDetailsall.timestamp }}</td>
+                <td class="{{contactDetailsall.STATUS}}"> <p> {{contactDetailsall.STATUS}} </p></td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="{% url 'contact_detail'  contactDetailsall.id  %}">
+                        <i class="fas fa-print"></i></a>
+                    <a class="btn btn-primary btn-sm" href="{% url 'contact_update'  contactDetailsall.id  %}">
+                        <i class="far fa-edit"></i></a>
+                    <a class="btn btn-danger btn-sm" href="{% url 'contact_delete'  contactDetailsall.id  %}">
+                        <i class="far fa-trash-alt"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</form>
+
+{% else %}
+
+<form enctype="multipart/form-data" method="post">
+    <div class="table-responsive  table-condensed">
+
+        <table class="table table-borderless table-striped ">
+            <thead>
+            <tr>
+
+                <th>User Name</th>
+                <th>Lesson</th>
+                <th>Subject</th>
+                <th>Created On</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -24,6 +104,10 @@
                 <td>{{ contactDetails.user }}</td>
                 <td>{{ contactDetails.NAME_OF_THE_LESSON }}</td>
                 <td>{{ contactDetails.SUBJECT }}</td>
+                <td>{{ contactDetails.timestamp }}</td>
+                <td class="{{contactDetails.STATUS}}">
+                    <p> {{contactDetails.STATUS}}</p>
+                </td>
                 <td>
                     <a class="btn btn-primary btn-sm" href="{% url 'contact_detail'  contactDetails.id  %}">
                         <i class="fas fa-print"></i></a>
@@ -39,5 +123,6 @@
         </table>
     </div>
 </form>
+{% endif %}
 
 {% endblock %}
