@@ -17,8 +17,8 @@
     <!-- Fontfaces CSS-->
 
     <link href="{% static 'css/font-face.css' %}" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 
     <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" media="all">
@@ -111,6 +111,7 @@
                         <a href="{% url 'contact_create' %}">
                             <i class="fas fa-file"></i> Create</a>
                     </li>
+
                 </ul>
             </nav>
         </div>
@@ -302,6 +303,8 @@ $('#printThisBtn').on('click', () => {
     });
 })
 
+
+
 </script>
 
 <script>
@@ -314,6 +317,67 @@ $('#faculty-update').on('click', function(){
 });
 
 });
+
+
+</script>
+
+<!--showhide-->
+<script>
+        $('.Big_add_Close_Input_2').hide();
+        $('.Big_add_Close_Input_3').hide();
+        $('.Big_add_Close_Input_4').hide();
+        $('.Big_add_block_2').hide();
+        $('.Big_add_block_3').hide();
+        $('.Big_add_block_4').hide();
+        $('.Big_add_block_5').hide();
+        $(function () {
+            //=====
+            $('.Big_add_New_Input_1').on('click', function () {
+                $('.Big_add_block_2').show()
+               // $('.Big_add_New_Input_1').hide();
+            });
+            //=====
+            $('.Big_add_New_Input_2').on('click', function () {
+                $('.Big_add_block_3').show()
+                $('.Big_add_Close_Input_2').show();
+                $('.Big_add_New_Input_2').hide();
+            });
+            $('.Big_add_Close_Input_2').on('click', function () {
+                $('.Big_add_block_2').hide();
+                $('.Big_add_block_2').find('input').val('');
+            });
+            //=====
+            $('.Big_add_New_Input_3').on('click', function () {
+                $('.Big_add_block_4').show()
+                $('.Big_add_Close_Input_3').show();
+                $('.Big_add_New_Input_3').hide();
+            });
+            $('.Big_add_Close_Input_3').on('click', function () {
+                $('.Big_add_block_3').hide();
+                $('.Big_add_block_3').find('input').val('');
+            });
+            //=====
+            $('.Big_add_New_Input_4').on('click', function () {
+                $('.Big_add_block_5').show()
+                $('.Big_add_Close_Input_4').show();
+                $('.Big_add_New_Input_4').hide();
+            });
+            $('.Big_add_Close_Input_4').on('click', function () {
+                $('.Big_add_block_4').hide();
+                $('.Big_add_block_4').find('input').val('');
+            });
+            //=====
+            $('.add_New_Input_5').on('click', function () {
+                $('.Big_add_block_5').show()
+                $('.Big_add_Close_Input_5').show();
+            });
+            $('.Big_add_Close_Input_5').on('click', function () {
+                $('.Big_add_block_5').hide();
+                $('.Big_add_block_5').find('input').val('');
+            });
+        });
+
+
 </script>
 
 

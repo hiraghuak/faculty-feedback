@@ -159,6 +159,8 @@
              </div>
          </div>
      </div>
+
+
      <div class="teachingPoint">
          <h3 class="center">Teaching Point 1</h3>
          <div class="row form-group">
@@ -283,7 +285,7 @@
              </div>
          </div>
 
-         {% if object.IMAGE_IF_ANY %}
+         {% if object.IMAGE_IF_ANY_2 %}
          <div class="row form-group">
              <div class="col-md-4">
                  <label class=" form-control-label">Image If Any</label>
@@ -332,6 +334,268 @@
              </div>
          </div>
      </div>
+
+     <div class="teachingPoint4">
+         <h3 class="center">Teaching Point 3</h3>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Teaching Point 3</label>
+             </div>
+             <div class="col-md-8">
+                 <div class="form-group">
+                     {{object.TEACHING_POINT_3}}
+                 </div>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Type of Learning Activity 3 </label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_3}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Domain 3</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.DOMAIN_3}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Learning Activity Details* 3</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY_3}}</p>
+             </div>
+         </div>
+
+         {% if object.IMAGE_IF_ANY_3 %}
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Image If Any</label>
+             </div>
+             <div class="col-md-8">
+                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_3.url}}" alt="{{object.IMAGE_IF_ANY_3}}">
+             </div>
+         </div>
+         {% endif %}
+
+        {% if object.VIDEO_LINK_IF_ANY_3 %}
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Video Link If Any 3</label>
+             </div>
+             <div class="col-md-8">
+            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_2}}">
+                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY_3}}</a>
+
+                       <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                            <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_3}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                       </div>
+             </div>
+         </div>
+         {% endif %}
+
+
+
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Learning Material Used 3</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_3}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Assessment of Learning Activity 3</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_3}}</p>
+             </div>
+         </div>
+     </div>
+
+      <div class="teachingPoint5">
+         <h3 class="center">Teaching Point 4</h3>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Teaching Point 4</label>
+             </div>
+             <div class="col-md-8">
+                 <div class="form-group">
+                     {{object.TEACHING_POINT_4}}
+                 </div>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Type of Learning Activity 4</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_4}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Domain 4</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.DOMAIN_4}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Learning Activity Details* 4</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY_4}}</p>
+             </div>
+         </div>
+
+         {% if object.IMAGE_IF_ANY_4 %}
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Image If Any</label>
+             </div>
+             <div class="col-md-8">
+                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_4.url}}" alt="{{object.IMAGE_IF_ANY_4}}">
+             </div>
+         </div>
+         {% endif %}
+
+        {% if object.VIDEO_LINK_IF_ANY_4 %}
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Video Link If Any 4</label>
+             </div>
+             <div class="col-md-8">
+            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_4}}">
+                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY_4}}</a>
+
+                       <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                            <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_4}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                       </div>
+             </div>
+         </div>
+         {% endif %}
+
+
+
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Learning Material Used 4</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_4}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Assessment of Learning Activity 4</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_4}}</p>
+             </div>
+         </div>
+     </div>
+
+      <div class="teachingPoint6">
+         <h3 class="center">Teaching Point 5</h3>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Teaching Point 5</label>
+             </div>
+             <div class="col-md-8">
+                 <div class="form-group">
+                     {{object.TEACHING_POINT_5}}
+                 </div>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Type of Learning Activity 5</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_5}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Domain 5</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.DOMAIN_5}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Learning Activity Details* 5</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY_5}}</p>
+             </div>
+         </div>
+
+         {% if object.IMAGE_IF_ANY_5 %}
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Image If Any</label>
+             </div>
+             <div class="col-md-8">
+                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_5.url}}" alt="{{object.IMAGE_IF_ANY_5}}">
+             </div>
+         </div>
+         {% endif %}
+
+        {% if object.VIDEO_LINK_IF_ANY_5 %}
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Video Link If Any 4</label>
+             </div>
+             <div class="col-md-8">
+            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_5}}">
+                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY_5}}</a>
+
+                       <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                            <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_5}}" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                       </div>
+             </div>
+         </div>
+         {% endif %}
+
+
+
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Learning Material Used 5</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_5}}</p>
+             </div>
+         </div>
+         <div class="row form-group">
+             <div class="col-md-4">
+                 <label class=" form-control-label">Assessment of Learning Activity 5</label>
+             </div>
+             <div class="col-md-8">
+                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_5}}</p>
+             </div>
+         </div>
+     </div>
+
      <div class="teachingPoint3">
          <div class="row form-group">
              <div class="col-md-4">
@@ -363,6 +627,8 @@
 
 
      </div>
+
+
  </div>
 
 <!--<div class="old">-->

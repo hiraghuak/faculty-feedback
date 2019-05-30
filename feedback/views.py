@@ -31,9 +31,11 @@ class HomePageView(ListView):
     model = Post
     # template_name = 'home.html'
 
+
 # Redirect to login
 def my_view(request):
     return redirect('login/')
+
 
 # List view
 def feedbacklist(request):
@@ -42,7 +44,7 @@ def feedbacklist(request):
         my_qsall = Post.objects.all()
 
     template_name = 'updates/contact_list.html'
-    context = {'object_list': my_qs, 'object_all':my_qsall}
+    context = {'object_list': my_qs, 'object_all': my_qsall}
     return render(request, template_name, context)
 
 
@@ -50,6 +52,7 @@ def feedbacklist(request):
 class FeedbackDetail(DetailView):
     model = Post
     template_name = 'updates/contact_details.html'
+
 
 # Crate form
 def blog_post_create_view(request):
@@ -64,53 +67,93 @@ def blog_post_create_view(request):
     context = {'form': form}
     return render(request, template_name, context)
 
+
 # Edit/Update form
 class FeedbackUpdate(UpdateView):
     model = Post
     template_name = 'updates/contact_form.html'
     fields = [
-            'CLASS_NAME',
-            'SUBJECT',
+        'CLASS_NAME',
+        'SUBJECT',
 
-            'NAME_OF_THE_LESSON',
-            'AREA_OF_INTEREST',
-            'STUDENTS_EXPERIENCE_VISUAL',
-            'AUDITORY',
-            'FINE_MOTOR',
-            'GROSS_MOTOR',
+        'NAME_OF_THE_LESSON',
+        'INSTRUCTIONAL_OBJECTIVE_1',
+        'INSTRUCTIONAL_OBJECTIVE_2',
+        'INSTRUCTIONAL_OBJECTIVE_3',
+        'INSTRUCTIONAL_OBJECTIVE_4',
+        'INSTRUCTIONAL_OBJECTIVE_5',
 
-            # TEACHING_POINT_1
-            'TEACHING_POINT_1',
-            'DOMAIN',
-            'TYPE_OF_LEARNING_ACTIVITY_1',
-            'LEARNING_ACTIVITY',
-            'INTELLIGENCE_USED',
-            'IMAGE_IF_ANY',
-            'VIDEO_LINK_IF_ANY',
-            'LEARNING_MATERIAL_USED',
-            'ASSESSMENT_OF_LEARNING_ACTIVITY',
-            'HOMEWORK',
-            'COMMENTS',
-            'STATUS',
+        'AREA_OF_INTEREST',
+        'STUDENTS_EXPERIENCE_VISUAL',
+        'AUDITORY',
+        'FINE_MOTOR',
+        'GROSS_MOTOR',
 
-            'INSTRUCTIONAL_OBJECTIVE_1',
-            'INSTRUCTIONAL_OBJECTIVE_2',
-            'INSTRUCTIONAL_OBJECTIVE_3',
-            'INSTRUCTIONAL_OBJECTIVE_4',
-            'INSTRUCTIONAL_OBJECTIVE_5',
+        # TEACHING_POINT_1
+        'TEACHING_POINT_1',
+        'DOMAIN',
+        'TYPE_OF_LEARNING_ACTIVITY_1',
+        'LEARNING_ACTIVITY',
+        'INTELLIGENCE_USED',
+        'IMAGE_IF_ANY',
+        'VIDEO_LINK_IF_ANY',
+        'LEARNING_MATERIAL_USED',
+        'ASSESSMENT_OF_LEARNING_ACTIVITY',
 
-            # TEACHING_POINT_2
-            'TEACHING_POINT_2',
-            'DOMAIN_2',
-            'TYPE_OF_LEARNING_ACTIVITY_2',
-            'LEARNING_ACTIVITY_2',
-            'INTELLIGENCE_USED_2',
-            'IMAGE_IF_ANY_2',
-            'VIDEO_LINK_IF_ANY_2',
-            'LEARNING_MATERIAL_USED_2',
-            'ASSESSMENT_OF_LEARNING_ACTIVITY_2',
-            'publish_date',
-        ]
+
+        # TEACHING_POINT_2
+        'TEACHING_POINT_2',
+        'DOMAIN_2',
+        'TYPE_OF_LEARNING_ACTIVITY_2',
+        'LEARNING_ACTIVITY_2',
+        'INTELLIGENCE_USED_2',
+        'IMAGE_IF_ANY_2',
+        'VIDEO_LINK_IF_ANY_2',
+        'LEARNING_MATERIAL_USED_2',
+        'ASSESSMENT_OF_LEARNING_ACTIVITY_2',
+
+        # TEACHING_POINT_3
+        'TEACHING_POINT_3',
+        'DOMAIN_3',
+        'TYPE_OF_LEARNING_ACTIVITY_3',
+        'LEARNING_ACTIVITY_3',
+        'INTELLIGENCE_USED_3',
+        'IMAGE_IF_ANY_3',
+        'VIDEO_LINK_IF_ANY_3',
+        'LEARNING_MATERIAL_USED_3',
+        'ASSESSMENT_OF_LEARNING_ACTIVITY_3',
+
+        # TEACHING_POINT_4
+        'TEACHING_POINT_4',
+        'DOMAIN_4',
+        'TYPE_OF_LEARNING_ACTIVITY_4',
+        'LEARNING_ACTIVITY_4',
+        'INTELLIGENCE_USED_4',
+        'IMAGE_IF_ANY_4',
+        'VIDEO_LINK_IF_ANY_4',
+        'LEARNING_MATERIAL_USED_4',
+        'ASSESSMENT_OF_LEARNING_ACTIVITY_4',
+
+        # TEACHING_POINT_5
+        'TEACHING_POINT_5',
+        'DOMAIN_5',
+        'TYPE_OF_LEARNING_ACTIVITY_5',
+        'LEARNING_ACTIVITY_5',
+        'INTELLIGENCE_USED_5',
+        'IMAGE_IF_ANY_5',
+        'VIDEO_LINK_IF_ANY_5',
+        'LEARNING_MATERIAL_USED_5',
+        'ASSESSMENT_OF_LEARNING_ACTIVITY_5',
+
+
+
+        # FINAL FORM
+        'HOMEWORK',
+        'COMMENTS',
+        'STATUS',
+
+        'publish_date',
+    ]
     success_url = reverse_lazy('contact_list')
 
 
