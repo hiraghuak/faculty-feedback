@@ -8,6 +8,7 @@
         z-index: 13;
         right: 5%;
     }
+
 </style>
 
 <div class="backBtn clearfix">
@@ -16,930 +17,1083 @@
     </a>
 </div>
 
-    <div class="printAre card">
-        <div class="card-header">
-            <strong>Print Feedback</strong>
-        </div>
-        <div class=" card-body card-block">
-            <form method="POST" enctype="multipart/form-data">
-
- <div class="div">
-     <div class="formfirstpart">
-
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label"> Class</label>
-             </div>
-             <div class="col-md-8">
-                 <div class="form-group">
-                     {{object.CLASS_NAME}}
-                 </div>
-             </div>
-         </div>
-
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Subject</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.SUBJECT}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label"> Name of the Lesson</label>
-             </div>
-             <div class="col-md-8">
-                 <div class="form-group">
-                     {{object.NAME_OF_THE_LESSON}}
-                 </div>
-             </div>
-         </div>
-         <div class="test">
-             <div class="row form-group form-row ">
-                 <div class="col-md-4">
-                     <label>Instructional Objective 1</label>
-                 </div>
-                 <div class="col-md-8">
-                     <div class="input-group mb-3 ddfrw">
-                         {{object.INSTRUCTIONAL_OBJECTIVE_1}}
-
-                     </div>
-                 </div>
-             </div>
-             <div class="row form-group form-row ">
-                 <div class="col-md-4">
-                     <label>Instructional Objective 2</label>
-                 </div>
-                 <div class="col-md-8">
-                     <div class="input-group mb-3 ddfrw">
-                         {{object.INSTRUCTIONAL_OBJECTIVE_2}}
-                     </div>
-                 </div>
-             </div>
-             <div class="row form-group form-row ">
-                 <div class="col-md-4">
-                     <label>Instructional Objective 3</label>
-                 </div>
-                 <div class="col-md-8">
-                     <div class="input-group mb-3 ddfrw">
-                         {{object.INSTRUCTIONAL_OBJECTIVE_3}}
-                     </div>
-                 </div>
-             </div>
-             <div class="row form-group form-row ">
-                 <div class="col-md-4">
-                     <label>Instructional Objective 4</label>
-                 </div>
-                 <div class="col-md-8">
-                     <div class="input-group mb-3 ddfrw">
-                         {{object.INSTRUCTIONAL_OBJECTIVE_4}}
-
-                     </div>
-                 </div>
-             </div>
-             <div class="row form-group form-row ">
-                 <div class="col-md-4">
-                     <label>Instructional Objective 5</label>
-                 </div>
-                 <div class="col-md-8">
-                     <div class="input-group mb-3 ddfrw">
-                         {{object.INSTRUCTIONAL_OBJECTIVE_5}}
-
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Are of Interest</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.AREA_OF_INTEREST}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Intelligence Used</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.INTELLIGENCE_USED}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Students Experience Visual</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.STUDENTS_EXPERIENCE_VISUAL}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Auditory</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.AUDITORY}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Fine Motor</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.FINE_MOTOR}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Gross Motor</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.GROSS_MOTOR}}</p>
-             </div>
-         </div>
-     </div>
-
-
-     <div class="teachingPoint">
-         <h3 class="center">Teaching Point 1</h3>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Teaching Point 1</label>
-             </div>
-             <div class="col-md-8">
-                 <div class="form-group">
-                     {{object.TEACHING_POINT_1}}
-                 </div>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Type of Learning Activity 1</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_1}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Domain 1</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.DOMAIN}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Activity Details* 1</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY}}</p>
-             </div>
-         </div>
-
-         {% if object.IMAGE_IF_ANY %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Image If Any 1</label>
-             </div>
-             <div class="col-md-8">
-                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY.url}}" alt="{{object.IMAGE_IF_ANY}}">
-             </div>
-         </div>
-         {% endif %}
-
-        {% if object.VIDEO_LINK_IF_ANY %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Video Link If Any 1</label>
-             </div>
-             <div class="col-md-8">
-
-                 <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY}}">
-                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY}}</a>
-
-                        <div class="embed-responsive embed-responsive-16by9 hide_in_print">
-                            <iframe class="embed-responsive-item" width="560" height="315"
-                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY}}" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                       </div>
-
-             </div>
-         </div>
-         {% endif %}
-
-
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Material Used 1</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Assessment of Learning Activity 1</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY}}</p>
-             </div>
-         </div>
-     </div>
-     <div class="teachingPoint2">
-         <h3 class="center">Teaching Point 2</h3>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Teaching Point 2</label>
-             </div>
-             <div class="col-md-8">
-                 <div class="form-group">
-                     {{object.TEACHING_POINT_2}}
-                 </div>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Type of Learning Activity 2 </label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_2}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Domain 2</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.DOMAIN_2}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Activity Details* 2</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY_2}}</p>
-             </div>
-         </div>
-
-         {% if object.IMAGE_IF_ANY_2 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Image If Any</label>
-             </div>
-             <div class="col-md-8">
-                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_2.url}}" alt="{{object.IMAGE_IF_ANY_2}}">
-             </div>
-         </div>
-         {% endif %}
-
-        {% if object.VIDEO_LINK_IF_ANY_2 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Video Link If Any 2</label>
-             </div>
-             <div class="col-md-8">
-            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_2}}">
-                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY_2}}</a>
-
-                       <div class="embed-responsive embed-responsive-16by9 hide_in_print">
-                            <iframe class="embed-responsive-item" width="560" height="315"
-                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_2}}" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                       </div>
-             </div>
-         </div>
-         {% endif %}
-
-
-
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Material Used 2</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_2}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Assessment of Learning Activity 2</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_2}}</p>
-             </div>
-         </div>
-     </div>
-
-     <div class="teachingPoint4">
-         <h3 class="center">Teaching Point 3</h3>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Teaching Point 3</label>
-             </div>
-             <div class="col-md-8">
-                 <div class="form-group">
-                     {{object.TEACHING_POINT_3}}
-                 </div>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Type of Learning Activity 3 </label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_3}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Domain 3</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.DOMAIN_3}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Activity Details* 3</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY_3}}</p>
-             </div>
-         </div>
-
-         {% if object.IMAGE_IF_ANY_3 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Image If Any</label>
-             </div>
-             <div class="col-md-8">
-                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_3.url}}" alt="{{object.IMAGE_IF_ANY_3}}">
-             </div>
-         </div>
-         {% endif %}
-
-        {% if object.VIDEO_LINK_IF_ANY_3 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Video Link If Any 3</label>
-             </div>
-             <div class="col-md-8">
-            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_2}}">
-                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY_3}}</a>
-
-                       <div class="embed-responsive embed-responsive-16by9 hide_in_print">
-                            <iframe class="embed-responsive-item" width="560" height="315"
-                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_3}}" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                       </div>
-             </div>
-         </div>
-         {% endif %}
-
-
-
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Material Used 3</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_3}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Assessment of Learning Activity 3</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_3}}</p>
-             </div>
-         </div>
-     </div>
-
-      <div class="teachingPoint5">
-         <h3 class="center">Teaching Point 4</h3>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Teaching Point 4</label>
-             </div>
-             <div class="col-md-8">
-                 <div class="form-group">
-                     {{object.TEACHING_POINT_4}}
-                 </div>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Type of Learning Activity 4</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_4}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Domain 4</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.DOMAIN_4}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Activity Details* 4</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY_4}}</p>
-             </div>
-         </div>
-
-         {% if object.IMAGE_IF_ANY_4 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Image If Any</label>
-             </div>
-             <div class="col-md-8">
-                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_4.url}}" alt="{{object.IMAGE_IF_ANY_4}}">
-             </div>
-         </div>
-         {% endif %}
-
-        {% if object.VIDEO_LINK_IF_ANY_4 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Video Link If Any 4</label>
-             </div>
-             <div class="col-md-8">
-            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_4}}">
-                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY_4}}</a>
-
-                       <div class="embed-responsive embed-responsive-16by9 hide_in_print">
-                            <iframe class="embed-responsive-item" width="560" height="315"
-                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_4}}" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                       </div>
-             </div>
-         </div>
-         {% endif %}
-
-
-
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Material Used 4</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_4}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Assessment of Learning Activity 4</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_4}}</p>
-             </div>
-         </div>
-     </div>
-
-      <div class="teachingPoint6">
-         <h3 class="center">Teaching Point 5</h3>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Teaching Point 5</label>
-             </div>
-             <div class="col-md-8">
-                 <div class="form-group">
-                     {{object.TEACHING_POINT_5}}
-                 </div>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Type of Learning Activity 5</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_5}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Domain 5</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.DOMAIN_5}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Activity Details* 5</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_ACTIVITY_5}}</p>
-             </div>
-         </div>
-
-         {% if object.IMAGE_IF_ANY_5 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Image If Any</label>
-             </div>
-             <div class="col-md-8">
-                 <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_5.url}}" alt="{{object.IMAGE_IF_ANY_5}}">
-             </div>
-         </div>
-         {% endif %}
-
-        {% if object.VIDEO_LINK_IF_ANY_5 %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Video Link If Any 4</label>
-             </div>
-             <div class="col-md-8">
-            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_5}}">
-                     https://youtu.be/{{object.VIDEO_LINK_IF_ANY_5}}</a>
-
-                       <div class="embed-responsive embed-responsive-16by9 hide_in_print">
-                            <iframe class="embed-responsive-item" width="560" height="315"
-                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_5}}" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                       </div>
-             </div>
-         </div>
-         {% endif %}
-
-
-
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Learning Material Used 5</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_5}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Assessment of Learning Activity 5</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_5}}</p>
-             </div>
-         </div>
-     </div>
-
-     <div class="teachingPoint3">
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">HomeWork</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.HOMEWORK}}</p>
-             </div>
-         </div>
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Comments</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.COMMENTS}}</p>
-             </div>
-         </div>
-
-         {% if object.STATUS %}
-         <div class="row form-group">
-             <div class="col-md-4">
-                 <label class=" form-control-label">Status</label>
-             </div>
-             <div class="col-md-8">
-                 <p class="form-control-static"> {{object.STATUS}}</p>
-             </div>
-         </div>
-         {% endif %}
-
-
-     </div>
-
-
- </div>
-
-<!--<div class="old">-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Class</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.CLASS_NAME}}</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Subject</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.SUBJECT}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Name of the Lesson</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.NAME_OF_THE_LESSON}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Instructional Objective 1</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_1}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Instructional Objective 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_2}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Instructional Objective 3</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_3}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Instructional Objective 4</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_4}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Instructional Objective 5</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_5}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Teaching Point 1</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.TEACHING_POINT_1}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Domain </label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.DOMAIN}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Are of Interest</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.AREA_OF_INTEREST}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Type of Learning Activity 1</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.TYPE_OF_LEARNING_ACTIVITY_1}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Learning Activity Details</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.LEARNING_ACTIVITY}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Students Experience Visual</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.STUDENTS_EXPERIENCE_VISUAL}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Auditory</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.AUDITORY}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Fine Motor</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.FINE_MOTOR}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Gross Motor</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.GROSS_MOTOR}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Intelligence Used</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.INTELLIGENCE_USED}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                {% if object.IMAGE_IF_ANY %}-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Image If any </label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <img class="upimg img-fluid rounded mx-auto d-block" src="{{ object.IMAGE_IF_ANY.url}}"-->
-<!--                            alt="{{ object.CLASS_NAME }}" />-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                {% endif %}-->
-
-
-<!--                {% if object.VIDEO_LINK_IF_ANY %}-->
-<!--                <div class="videoIfAny row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Video Link If Any</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <div class="embed-responsive embed-responsive-16by9">-->
-<!--                            <iframe class="embed-responsive-item" width="560" height="315"-->
-<!--                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY}}" frameborder="0"-->
-<!--                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
-<!--                                allowfullscreen></iframe>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                {% endif %}-->
-
-
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Learning Material Used </label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.LEARNING_MATERIAL_USED}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Assessment of Learning Activity </label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.ASSESSMENT_OF_LEARNING_ACTIVITY}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Domain 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.DOMAIN_2}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Are of Interest 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.AREA_OF_INTEREST_2}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Type Of Learning Activity</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.TYPE_OF_LEARNING_ACTIVITY_2}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label"> Learning Activity 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.LEARNING_ACTIVITY_2}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-
-<!--                {% if object.IMAGE_IF_ANY_2 %}-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Image if Any 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <img class="upimg img-fluid rounded mx-auto d-block" src="{{ object.IMAGE_IF_ANY_2.url}}"-->
-<!--                            alt="{{ object.CLASS_NAME }}" />-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                {% endif %}-->
-
-
-<!--                {% if object.VIDEO_LINK_IF_ANY %}-->
-<!--                <div class="videoIfAny row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Video Link if Any 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <div class="embed-responsive embed-responsive-16by9">-->
-<!--                            <iframe class="embed-responsive-item" width="560" height="315"-->
-<!--                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_2}}" frameborder="0"-->
-<!--                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
-<!--                                allowfullscreen></iframe>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                {% endif %}-->
-
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Learning Material Used 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.LEARNING_MATERIAL_USED_2}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Assessment of Learning Activity 2</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.ASSESSMENT_OF_LEARNING_ACTIVITY_2}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Homework</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.HOMEWORK}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Comments</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.COMMENTS}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="row form-group">-->
-<!--                    <div class="col-md-4">-->
-<!--                        <label class=" form-control-label">Status</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-8">-->
-<!--                        <p class="form-control-static"> {{ object.STATUS}} </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                </div>-->
-
-
-                <button id="printThisBtn" type="button" class="btn btn-primary btn-sm">
-                    <i class="fas fa-print"> </i> Print
-                </button>
-
-            </form>
-        </div>
+<div class="printAre card">
+    <div class="card-header">
+        <strong>Print Feedback</strong>
     </div>
+    <div class=" card-body card-block">
+        <form method="POST" enctype="multipart/form-data">
+
+            <div class="div">
+                <div class="formfirstpart">
+
+                    {% if object.CLASS_NAME %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label"> Class</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{object.CLASS_NAME}}
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endif %}
+
+                    {% if  object.SUBJECT %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Subject</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.SUBJECT}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.NAME_OF_THE_LESSON %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label"> Name of the Lesson</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{object.NAME_OF_THE_LESSON}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <div class="test">
+
+                        {% if object.INSTRUCTIONAL_OBJECTIVE_1 %}
+                        <div class="row form-group form-row ">
+                            <div class="col-md-4">
+                                <label>Instructional Objective 1</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group mb-3 ddfrw">
+                                    {{object.INSTRUCTIONAL_OBJECTIVE_1}}
+
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if  object.INSTRUCTIONAL_OBJECTIVE_2 %}
+                        <div class="row form-group form-row ">
+                            <div class="col-md-4">
+                                <label>Instructional Objective 2</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group mb-3 ddfrw">
+                                    {{object.INSTRUCTIONAL_OBJECTIVE_2}}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if  object.INSTRUCTIONAL_OBJECTIVE_3 %}
+                        <div class="row form-group form-row ">
+                            <div class="col-md-4">
+                                <label>Instructional Objective 3</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group mb-3 ddfrw">
+                                    {{object.INSTRUCTIONAL_OBJECTIVE_3}}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if  object.INSTRUCTIONAL_OBJECTIVE_4 %}
+
+                        <div class="row form-group form-row ">
+                            <div class="col-md-4">
+                                <label>Instructional Objective 4</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group mb-3 ddfrw">
+                                    {{object.INSTRUCTIONAL_OBJECTIVE_4}}
+
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if  object.INSTRUCTIONAL_OBJECTIVE_5 %}
+                        <div class="row form-group form-row ">
+                            <div class="col-md-4">
+                                <label>Instructional Objective 5</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group mb-3 ddfrw">
+                                    {{object.INSTRUCTIONAL_OBJECTIVE_5}}
+
+                                </div>
+                            </div>
+                        </div>
+                         {% endif %}
+
+                    </div>
+
+                     {% if  object.AREA_OF_INTEREST %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Are of Interest</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.AREA_OF_INTEREST}}</p>
+                        </div>
+                    </div>
+                     {% endif %}
+
+                        {% if  object.INTELLIGENCE_USED %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Intelligence Used</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.INTELLIGENCE_USED}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if  object.STUDENTS_EXPERIENCE_VISUAL %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Students Experience Visual</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.STUDENTS_EXPERIENCE_VISUAL}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if  object.AUDITORY %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Auditory</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.AUDITORY}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                     {% if  object.FINE_MOTOR %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Fine Motor</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.FINE_MOTOR}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if  object.GROSS_MOTOR %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Gross Motor</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.GROSS_MOTOR}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+
+                <div class="teachingPoint">
+
+                    {% if  object.TEACHING_POINT_1 %}
+                    <h3 class="center">Teaching Point 1</h3>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Teaching Point 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{object.TEACHING_POINT_1}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if  object.TYPE_OF_LEARNING_ACTIVITY_1 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Type of Learning Activity 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_1}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if  object.DOMAIN %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Domain 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.DOMAIN}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if  object.LEARNING_ACTIVITY %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Activity Details* 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_ACTIVITY}}</p>
+                        </div>
+                    </div>
+                     {% endif %}
+
+                    {% if object.IMAGE_IF_ANY %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Image If Any 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY.url}}"
+                                 alt="{{object.IMAGE_IF_ANY}}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.VIDEO_LINK_IF_ANY %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Video Link If Any 1</label>
+                        </div>
+                        <div class="col-md-8">
+
+                            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY}}">
+                                https://youtu.be/{{object.VIDEO_LINK_IF_ANY}}</a>
+
+                            <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                                <iframe class="embed-responsive-item" width="560" height="315"
+                                        src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY}}" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.LEARNING_MATERIAL_USED %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Material Used 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.ASSESSMENT_OF_LEARNING_ACTIVITY %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Assessment of Learning Activity 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                </div>
+                <div class="teachingPoint2">
+
+                    {% if object.TEACHING_POINT_2 %}
+                    <h3 class="center">Teaching Point 2</h3>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Teaching Point 2</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{object.TEACHING_POINT_2}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.TYPE_OF_LEARNING_ACTIVITY_2 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Type of Learning Activity 2 </label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_2}}</p>
+                        </div>
+                    </div>
+                     {% endif %}
+
+                    {% if object.DOMAIN_2 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Domain 2</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.DOMAIN_2}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                     {% if object.LEARNING_ACTIVITY_2 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Activity Details* 2</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_ACTIVITY_2}}</p>
+                        </div>
+                    </div>
+                     {% endif %}
+
+                    {% if object.IMAGE_IF_ANY_2 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Image If Any</label>
+                        </div>
+                        <div class="col-md-8">
+                            <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_2.url}}"
+                                 alt="{{object.IMAGE_IF_ANY_2}}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.VIDEO_LINK_IF_ANY_2 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Video Link If Any 2</label>
+                        </div>
+                        <div class="col-md-8">
+                            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_2}}">
+                                https://youtu.be/{{object.VIDEO_LINK_IF_ANY_2}}</a>
+
+                            <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                                <iframe class="embed-responsive-item" width="560" height="315"
+                                        src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_2}}"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                {% if object.LEARNING_MATERIAL_USED_2 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Material Used 2</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_2}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.ASSESSMENT_OF_LEARNING_ACTIVITY_2 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Assessment of Learning Activity 2</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_2}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+                <div class="teachingPoint4">
+                     {% if object.TEACHING_POINT_3 %}
+                    <h3 class="center">Teaching Point 3</h3>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Teaching Point 3</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{object.TEACHING_POINT_3}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.TYPE_OF_LEARNING_ACTIVITY_3 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Type of Learning Activity 3 </label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_3}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.DOMAIN_3 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Domain 3</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.DOMAIN_3}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.LEARNING_ACTIVITY_3 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Activity Details* 3</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_ACTIVITY_3}}</p>
+                        </div>
+                    </div>
+                     {% endif %}
+
+                    {% if object.IMAGE_IF_ANY_3 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Image If Any</label>
+                        </div>
+                        <div class="col-md-8">
+                            <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_3.url}}"
+                                 alt="{{object.IMAGE_IF_ANY_3}}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.VIDEO_LINK_IF_ANY_3 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Video Link If Any 3</label>
+                        </div>
+                        <div class="col-md-8">
+                            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_2}}">
+                                https://youtu.be/{{object.VIDEO_LINK_IF_ANY_3}}</a>
+
+                            <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                                <iframe class="embed-responsive-item" width="560" height="315"
+                                        src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_3}}"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.LEARNING_MATERIAL_USED_3 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Material Used 3</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_3}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.ASSESSMENT_OF_LEARNING_ACTIVITY_3 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Assessment of Learning Activity 3</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_3}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                </div>
+
+                <div class="teachingPoint5">
+                    {% if object.TEACHING_POINT_4 %}
+                    <h3 class="center">Teaching Point 4</h3>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Teaching Point 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{object.TEACHING_POINT_4}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.TYPE_OF_LEARNING_ACTIVITY_4 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Type of Learning Activity 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_4}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.DOMAIN_4 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Domain 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.DOMAIN_4}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.LEARNING_ACTIVITY_4 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Activity Details* 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_ACTIVITY_4}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.IMAGE_IF_ANY_4 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Image If Any</label>
+                        </div>
+                        <div class="col-md-8">
+                            <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_4.url}}"
+                                 alt="{{object.IMAGE_IF_ANY_4}}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.VIDEO_LINK_IF_ANY_4 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Video Link If Any 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_4}}">
+                                https://youtu.be/{{object.VIDEO_LINK_IF_ANY_4}}</a>
+
+                            <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                                <iframe class="embed-responsive-item" width="560" height="315"
+                                        src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_4}}"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.LEARNING_MATERIAL_USED_4 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Material Used 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_4}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.ASSESSMENT_OF_LEARNING_ACTIVITY_4 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Assessment of Learning Activity 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_4}}</p>
+                        </div>
+                    </div>
+                     {% endif %}
+
+                </div>
+
+                <div class="teachingPoint6">
+
+                    {% if object.TEACHING_POINT_5 %}
+                    <h3 class="center">Teaching Point 5</h3>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Teaching Point 5</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{object.TEACHING_POINT_5}}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.TYPE_OF_LEARNING_ACTIVITY_5 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Type of Learning Activity 5</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_5}}</p>
+                        </div>
+                    </div>
+                     {% endif %}
+
+                    {% if object.DOMAIN_5 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Domain 5</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.DOMAIN_5}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if object.LEARNING_ACTIVITY_5 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Activity Details* 5</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_ACTIVITY_5}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.IMAGE_IF_ANY_5 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Image If Any</label>
+                        </div>
+                        <div class="col-md-8">
+                            <img class="img-fluid img-thumbnail" src="{{object.IMAGE_IF_ANY_5.url}}"
+                                 alt="{{object.IMAGE_IF_ANY_5}}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.VIDEO_LINK_IF_ANY_5 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Video Link If Any 4</label>
+                        </div>
+                        <div class="col-md-8">
+                            <a class="nav-link" target="_blank" href="https://youtu.be/{{object.VIDEO_LINK_IF_ANY_5}}">
+                                https://youtu.be/{{object.VIDEO_LINK_IF_ANY_5}}</a>
+
+                            <div class="embed-responsive embed-responsive-16by9 hide_in_print">
+                                <iframe class="embed-responsive-item" width="560" height="315"
+                                        src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_5}}"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.LEARNING_MATERIAL_USED_5 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Learning Material Used 5</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.LEARNING_MATERIAL_USED_5}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.ASSESSMENT_OF_LEARNING_ACTIVITY_5 %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Assessment of Learning Activity 5</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_5}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                </div>
+
+                <div class="teachingPoint3">
+
+                    {% if object.HOMEWORK %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">HomeWork</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.HOMEWORK}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.COMMENTS %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Comments</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.COMMENTS}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if object.STATUS %}
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label">Status</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-static"> {{object.STATUS}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            <!--<div class="old">-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Class</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.CLASS_NAME}}</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Subject</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.SUBJECT}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Name of the Lesson</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.NAME_OF_THE_LESSON}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Instructional Objective 1</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_1}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Instructional Objective 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_2}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Instructional Objective 3</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_3}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Instructional Objective 4</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_4}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Instructional Objective 5</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.INSTRUCTIONAL_OBJECTIVE_5}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Teaching Point 1</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.TEACHING_POINT_1}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Domain </label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.DOMAIN}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Are of Interest</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.AREA_OF_INTEREST}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Type of Learning Activity 1</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.TYPE_OF_LEARNING_ACTIVITY_1}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Learning Activity Details</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.LEARNING_ACTIVITY}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Students Experience Visual</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.STUDENTS_EXPERIENCE_VISUAL}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Auditory</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.AUDITORY}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Fine Motor</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.FINE_MOTOR}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Gross Motor</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.GROSS_MOTOR}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Intelligence Used</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.INTELLIGENCE_USED}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+            <!--                {% if object.IMAGE_IF_ANY %}-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Image If any </label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <img class="upimg img-fluid rounded mx-auto d-block" src="{{ object.IMAGE_IF_ANY.url}}"-->
+            <!--                            alt="{{ object.CLASS_NAME }}" />-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                {% endif %}-->
+
+
+            <!--                {% if object.VIDEO_LINK_IF_ANY %}-->
+            <!--                <div class="videoIfAny row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Video Link If Any</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <div class="embed-responsive embed-responsive-16by9">-->
+            <!--                            <iframe class="embed-responsive-item" width="560" height="315"-->
+            <!--                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY}}" frameborder="0"-->
+            <!--                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+            <!--                                allowfullscreen></iframe>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                {% endif %}-->
+
+
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Learning Material Used </label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.LEARNING_MATERIAL_USED}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Assessment of Learning Activity </label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.ASSESSMENT_OF_LEARNING_ACTIVITY}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Domain 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.DOMAIN_2}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Are of Interest 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.AREA_OF_INTEREST_2}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Type Of Learning Activity</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.TYPE_OF_LEARNING_ACTIVITY_2}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label"> Learning Activity 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.LEARNING_ACTIVITY_2}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+
+            <!--                {% if object.IMAGE_IF_ANY_2 %}-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Image if Any 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <img class="upimg img-fluid rounded mx-auto d-block" src="{{ object.IMAGE_IF_ANY_2.url}}"-->
+            <!--                            alt="{{ object.CLASS_NAME }}" />-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                {% endif %}-->
+
+
+            <!--                {% if object.VIDEO_LINK_IF_ANY %}-->
+            <!--                <div class="videoIfAny row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Video Link if Any 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <div class="embed-responsive embed-responsive-16by9">-->
+            <!--                            <iframe class="embed-responsive-item" width="560" height="315"-->
+            <!--                                src="https://www.youtube.com/embed/{{object.VIDEO_LINK_IF_ANY_2}}" frameborder="0"-->
+            <!--                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+            <!--                                allowfullscreen></iframe>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                {% endif %}-->
+
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Learning Material Used 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.LEARNING_MATERIAL_USED_2}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Assessment of Learning Activity 2</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.ASSESSMENT_OF_LEARNING_ACTIVITY_2}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Homework</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.HOMEWORK}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Comments</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.COMMENTS}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="row form-group">-->
+            <!--                    <div class="col-md-4">-->
+            <!--                        <label class=" form-control-label">Status</label>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-md-8">-->
+            <!--                        <p class="form-control-static"> {{ object.STATUS}} </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                </div>-->
+
+
+            <button id="printThisBtn" type="button" class="btn btn-primary btn-sm">
+                <i class="fas fa-print"> </i> Print
+            </button>
+
+        </form>
+    </div>
+</div>
 
 
 {% endblock %}
