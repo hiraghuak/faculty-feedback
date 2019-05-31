@@ -19,7 +19,6 @@ urlpatterns = [
 
     path('feedback/', HomePageView.as_view(), name='feedback'),
 
-    # path('create', FeedbackCreate.as_view(), name='contact_create'),
     path('create', blog_post_create_view, name='contact_create'),
 
     path('contact/<int:pk>', FeedbackDetail.as_view(), name='contact_detail'),
@@ -27,3 +26,5 @@ urlpatterns = [
     path('delete/<int:pk>', FeedbackDelete.as_view(), name='contact_delete'),
 
 ]
+
+

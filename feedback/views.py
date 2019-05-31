@@ -16,7 +16,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.views.generic import TemplateView
 
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, render_to_response
+from django.template import RequestContext
 
 from django.urls import reverse_lazy
 from django.http import HttpRequest
@@ -24,6 +25,18 @@ from django.db import models
 
 from .forms import PostForm
 from .models import Post
+
+
+def handler404(request, *args, **argv):
+    response = render_to_response('404.html', {}, context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def handler500(request, *args, **argv):
+    response = render_to_response('500.html', {}, context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
 
 
 # Listview
@@ -100,7 +113,6 @@ class FeedbackUpdate(UpdateView):
         'LEARNING_MATERIAL_USED',
         'ASSESSMENT_OF_LEARNING_ACTIVITY',
 
-
         # TEACHING_POINT_2
         'TEACHING_POINT_2',
         'DOMAIN_2',
@@ -144,8 +156,6 @@ class FeedbackUpdate(UpdateView):
         'VIDEO_LINK_IF_ANY_5',
         'LEARNING_MATERIAL_USED_5',
         'ASSESSMENT_OF_LEARNING_ACTIVITY_5',
-
-
 
         # FINAL FORM
         'HOMEWORK',

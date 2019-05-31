@@ -478,11 +478,11 @@ section {
 }
 
 .au-btn--green {
-    background: #63c76a;
+    background: #128a4b;
 }
 
 .au-btn--green:hover {
-    background: #59bd60;
+    background: #0f7b42;
 }
 
 .au-btn-plus {
@@ -826,12 +826,12 @@ section {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background: #4272d7;
+    background: #128a4b;
     margin-left: -3px;
 }
 
 .au-btn--submit:hover {
-    background: #3868cd;
+    background: #0d6d3b;
 }
 
 .au-btn--submit > i {
@@ -1555,7 +1555,7 @@ section {
 }
 
 .account-dropdown__footer a:hover {
-    background: #4272d7;
+    background: #128a4b;
     color: #fff;
 }
 
@@ -1621,7 +1621,7 @@ section {
 
 .navbar-sidebar .navbar__list li a {
     display: block;
-    color: #555;
+    color: #00aef0;
     font-size: 16px;
     padding: 15px 0;
 }
@@ -1631,11 +1631,22 @@ section {
 }
 
 .navbar-sidebar .navbar__list li a:hover {
-    color: #4272d7;
+    color: #00aef1;
 }
 
+.navbar-sidebar .navbar__list li{
+   padding: 0px 10px;
+   text-align: center;
+   border-radius: 4px;
+
+}
+.navbar-sidebar .navbar__list li.active{
+ background-color: #f5f5f5;
+}
+
+
 .navbar-sidebar .navbar__list li.active > a {
-    color: #4272d7;
+    color: #128a4b;
 }
 
 .has-sub {
@@ -14647,4 +14658,23 @@ section {
     width: 31% !important;
     right: 1% !important;
     box-shadow: 0px 2px 10px 2px #00000052 !important;
+}
+
+.header-mobile-inner img {
+    width: 55px;
+}
+
+.menu-sidebar .logo{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
+.menu-sidebar img{
+    width: 60px;
+}
+
+
+.card-body {
+    padding: 10px 0 !important;
 }

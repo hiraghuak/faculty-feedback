@@ -51,15 +51,12 @@
             <div class="login-wrap">
                 <div class="login-content">
                     <div class="login-logo">
-                        <a href="#">
-                            <img src="" alt="Faculty Feedback">
-                        </a>
+                            <img src="{% static 'img/login-logo.png' %}" alt="Faculty Feedback">
                     </div>
                     <div class="login-form">
                         <form method="post">
                             {% csrf_token %}
                             {{ form | crispy }}
-
                             <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Login</button>
                         </form>
                     </div>
