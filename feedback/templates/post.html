@@ -5,19 +5,6 @@
 
 <style>
 
-.form-group input{
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
 
 .form-group select {
     display: block;
@@ -206,7 +193,6 @@ display: block;
 }
 
 
-
 </style>
 
 {% if messages %}
@@ -360,9 +346,25 @@ display: block;
                             <label class=" form-control-label">Are of Interest</label>
                         </div>
                         <div class="col-md-8">
-                            <p class="form-control-static"> {{form.AREA_OF_INTEREST}}</p>
+
+                            <div class="form-check">
+
+                                <div class="checkbox">
+                                    {% for radio in form.AREA_OF_INTEREST %}
+                                    <label class="form-check-label " for="{{ radio.id_for_label }}">
+                                        {{ radio.choice_label }}
+                                        {{ radio.tag }}
+
+                                    </label>
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+
+
                         </div>
                     </div>
+
 
                     <div class="row form-group">
                         <div class="col-md-4">
@@ -415,7 +417,7 @@ display: block;
 
                 <div id="accordion" class="accordingform">
                     <div class="card card1">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse1"   >
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse1">
                             <a class="card-link">
                                 Teaching Point 1
                             </a>
@@ -504,8 +506,8 @@ display: block;
                         </div>
                     </div>
                     <div class="card card2">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse2" >
-                            <a class="collapsed card-link" >
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse2">
+                            <a class="collapsed card-link">
                                 Teaching Point 2
                             </a>
                         </div>
@@ -594,8 +596,8 @@ display: block;
                     </div>
 
                     <div class="card card3">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse3" >
-                            <a class="collapsed card-link" >
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse3">
+                            <a class="collapsed card-link">
                                 Teaching Point 3
                             </a>
                         </div>
@@ -684,14 +686,14 @@ display: block;
                     </div>
 
                     <div class="card card4">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse4" >
-                            <a class="collapsed card-link" >
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse4">
+                            <a class="collapsed card-link">
                                 Teaching Point 4
                             </a>
                         </div>
                         <div id="collapse4" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                                <div  class="teachingPoint5">
+                                <div class="teachingPoint5">
 
                                     <div class="row form-group">
                                         <div class="col-md-4">
@@ -775,8 +777,8 @@ display: block;
 
 
                     <div class="card card5">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse5" >
-                            <a class="collapsed card-link" >
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse5">
+                            <a class="collapsed card-link">
                                 Teaching Point 5
                             </a>
                         </div>

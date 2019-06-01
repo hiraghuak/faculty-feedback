@@ -215,14 +215,10 @@ class Post(models.Model):
     INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500, default='', blank=True)
     INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500, default='', blank=True)
 
-    STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150,
-                                                  choices=STUDENTS_EXPERIENCE_VISUAL_CHOICES, default='', blank=True)
-
-    AUDITORY = models.CharField(max_length=150, choices=AUDITORY_CHOICES, default='', blank=True)
-
-
-    FINE_MOTOR = models.CharField(max_length=150, choices=FINE_MOTOR_CHOICES, default='', blank=True)
-    GROSS_MOTOR = models.CharField(max_length=150, choices=GROSS_MOTOR_CHOICES, default='', blank=True)
+    STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150, default='', blank=True)
+    AUDITORY = models.CharField(max_length=150, default='', blank=True)
+    FINE_MOTOR = models.CharField(max_length=150, default='', blank=True)
+    GROSS_MOTOR = models.CharField(max_length=150, default='', blank=True)
 
     # TEACHING_POINT_1
     TEACHING_POINT_1 = models.CharField(max_length=500, default='', blank=True)
@@ -237,8 +233,6 @@ class Post(models.Model):
     LEARNING_MATERIAL_USED = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
 
-
-
     # TEACHING_POINT_2
     TEACHING_POINT_2 = models.CharField(max_length=500, default='', blank=True)
     DOMAIN_2 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
@@ -251,8 +245,6 @@ class Post(models.Model):
     VIDEO_LINK_IF_ANY_2 = models.CharField(max_length=1500, default='', blank=True)
     LEARNING_MATERIAL_USED_2 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
-
-
 
     # TEACHING_POINT_3
     TEACHING_POINT_3 = models.CharField(max_length=500, default='', blank=True)
@@ -267,8 +259,6 @@ class Post(models.Model):
     LEARNING_MATERIAL_USED_3 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY_3 = models.CharField(max_length=500, default='', blank=True)
 
-
-
     # TEACHING_POINT_4
     TEACHING_POINT_4 = models.CharField(max_length=500, default='', blank=True)
     DOMAIN_4 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
@@ -281,7 +271,6 @@ class Post(models.Model):
     VIDEO_LINK_IF_ANY_4 = models.CharField(max_length=1500, default='', blank=True)
     LEARNING_MATERIAL_USED_4 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY_4 = models.CharField(max_length=500, default='', blank=True)
-
 
     # TEACHING_POINT_4
     TEACHING_POINT_5 = models.CharField(max_length=500, default='', blank=True)
@@ -296,14 +285,12 @@ class Post(models.Model):
     LEARNING_MATERIAL_USED_5 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
     ASSESSMENT_OF_LEARNING_ACTIVITY_5 = models.CharField(max_length=500, default='', blank=True)
 
-
-
     # FINAL FORM
     HOMEWORK = models.TextField(blank=True)
     COMMENTS = models.TextField(blank=True)
     STATUS = models.CharField(max_length=150, choices=STATUS_CHOICES, default='Pending', blank=True)
 
-    #Updateded Date&time
+    # Updateded Date&time
     publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -313,6 +300,3 @@ class Post(models.Model):
 
     def __str__(self):
         return str(self.user)
-
-
-

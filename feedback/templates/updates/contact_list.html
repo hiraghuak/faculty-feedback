@@ -45,6 +45,8 @@
     color: #555;
     box-shadow: 0px 1px 2px 1px #0000002b;
 }
+
+
 </style>
 
 {% if user.is_superuser %}
@@ -72,8 +74,8 @@
                 <td>{{ contactDetailsall.NAME_OF_THE_LESSON }}</td>
                 <td>{{ contactDetailsall.SUBJECT }}</td>
                 <td>{{ contactDetailsall.timestamp }}</td>
-                <td class="{{contactDetailsall.STATUS}}"> <p> {{contactDetailsall.STATUS}} </p></td>
-                <td>
+                <td class="statusClass {{contactDetailsall.STATUS}}"> <p> {{contactDetailsall.STATUS}} </p></td>
+                <td class="listActionMenu">
                     <a class="btn btn-primary btn-sm" href="{% url 'contact_detail'  contactDetailsall.id  %}">
                         <i class="fas fa-print"></i></a>
                     <a class="btn btn-primary btn-sm" href="{% url 'contact_update'  contactDetailsall.id  %}">
@@ -114,10 +116,10 @@
                 <td>{{ contactDetails.NAME_OF_THE_LESSON }}</td>
                 <td>{{ contactDetails.SUBJECT }}</td>
                 <td>{{ contactDetails.timestamp }}</td>
-                <td class="{{contactDetails.STATUS}}">
+                <td class=" statusClass {{contactDetails.STATUS}}">
                     <p> {{contactDetails.STATUS}}</p>
                 </td>
-                <td>
+                <td class="listActionMenu">
                     <a class="btn btn-primary btn-sm" href="{% url 'contact_detail'  contactDetails.id  %}">
                         <i class="fas fa-print"></i></a>
                     <a class="btn btn-primary btn-sm" href="{% url 'contact_update'  contactDetails.id  %}">

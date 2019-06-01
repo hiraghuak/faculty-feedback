@@ -1,45 +1,39 @@
 from django import forms
 from .models import Post
 
-
-# class PostFormM(forms.Form):
-#     # content = forms.CharField(widget=forms.Textarea)
-#
-#     user = forms.CharField()
-#     CLASS_NAME = forms.CharField()
-#     SUBJECT = forms.CharField()
-#     NAME_OF_THE_LESSON = forms.CharField()
-#     AREA_OF_INTEREST = forms.CharField()
-#     STUDENTS_EXPERIENCE_VISUAL = forms.CharField()
-#     AUDITORY = forms.CharField()
-#     FINE_MOTOR = forms.CharField()
-#     GROSS_MOTOR = forms.CharField()
-#     TEACHING_POINT_1 = forms.CharField()
-#     DOMAIN = forms.CharField()
-#     TYPE_OF_LEARNING_ACTIVITY_1 = forms.CharField()
-#     LEARNING_ACTIVITY = forms.CharField()
-#     INTELLIGENCE_USED = forms.CharField()
-#     IMAGE_IF_ANY = forms.CharField()
-#     VIDEO_LINK_IF_ANY = forms.CharField()
-#     LEARNING_MATERIAL_USED = forms.CharField()
-#     ASSESSMENT_OF_LEARNING_ACTIVITY = forms.CharField()
-#     HOMEWORK = forms.CharField()
-#     COMMENTS = forms.CharField()
-#     STATUS = forms.CharField()
-#     publish_date = forms.CharField()
-
 AUDITORY_CHOICES = (
-    ('1', '1'),
-    ('2', '2'),
-    ('3', '3'),
-    ('4', '4'),
-    ('5', '5'),
+    ('1', '1 Select'),
+    ('2', '2 Select'),
+    ('3', '3 Select'),
+    ('4', '4 Select'),
+    ('5', '5 Select'),
+)
+
+AREA_OF_INTEREST = (
+    ('Age', 'Age'),
+    ('Gender', 'Gender'),
+    ('Widely Discussed', 'Widely Discussed'),
+    ('Contemporary', 'Contemporary'),
+    ('Within the Competency of Children', 'Within the Competency of Children'),
+    ('Social Religious Linguistic National Identity', 'Social Religious Linguistic National Identity'),
+    ('Does Not Induce Interest', 'Does Not Induce Interest'),
 )
 
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        # fields = "__all__"
+
+        widgets = {
+            'STUDENTS_EXPERIENCE_VISUAL': forms.RadioSelect(choices=AUDITORY_CHOICES),
+            'AUDITORY': forms.RadioSelect(choices=AUDITORY_CHOICES),
+            'FINE_MOTOR': forms.RadioSelect(choices=AUDITORY_CHOICES),
+            'GROSS_MOTOR': forms.RadioSelect(choices=AUDITORY_CHOICES),
+
+            'AREA_OF_INTEREST': forms.CheckboxSelectMultiple(choices=AREA_OF_INTEREST,
+                                                             attrs={'class': 'form-check-input'}),
+
+        }
+
         fields = [
             'CLASS_NAME',
             'SUBJECT',
@@ -52,11 +46,11 @@ class PostForm(forms.ModelForm):
             'INSTRUCTIONAL_OBJECTIVE_5',
 
             'AREA_OF_INTEREST',
+
             'STUDENTS_EXPERIENCE_VISUAL',
             'AUDITORY',
             'FINE_MOTOR',
             'GROSS_MOTOR',
-
 
             # TEACHING_POINT_1
             'TEACHING_POINT_1',
@@ -68,7 +62,6 @@ class PostForm(forms.ModelForm):
             'VIDEO_LINK_IF_ANY',
             'LEARNING_MATERIAL_USED',
             'ASSESSMENT_OF_LEARNING_ACTIVITY',
-
 
             # TEACHING_POINT_2
             'TEACHING_POINT_2',
@@ -114,22 +107,9 @@ class PostForm(forms.ModelForm):
             'LEARNING_MATERIAL_USED_5',
             'ASSESSMENT_OF_LEARNING_ACTIVITY_5',
 
-
             # LAST FORM
             'HOMEWORK',
             'COMMENTS',
             'STATUS',
             'publish_date',
         ]
-
-        # NAME_OF_THE_LESSON = forms.CharField(widget=forms.Textarea)
-        # widgets = {
-        #     'AUDITORY': forms.ChoiceField(attrs={
-        #   'type' : 'radio',
-        #   'class' : 'your_class'
-        #     },widget=forms.RadioSelect(),choices=AUDITORY_CHOICES)
-        # }
-
-        # exclude = [
-        #     'user',
-        # ]

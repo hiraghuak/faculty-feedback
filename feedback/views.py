@@ -3,6 +3,8 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 
+from django import forms
+
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
@@ -68,7 +70,7 @@ class FeedbackDetail(DetailView):
 
 
 # Crate form
-def blog_post_create_view(request):
+def Feedback_create(request):
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         obj = form.save(commit=False)
@@ -85,6 +87,7 @@ def blog_post_create_view(request):
 class FeedbackUpdate(UpdateView):
     model = Post
     template_name = 'updates/contact_form.html'
+
     fields = [
         'CLASS_NAME',
         'SUBJECT',

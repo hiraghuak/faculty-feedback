@@ -63,8 +63,18 @@ textarea:focus {
     outline: none;
 }
 
-input, textarea {
-    border: none;
+input[type=text], textarea {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 button {
@@ -1202,7 +1212,7 @@ section {
         position: relative;
         top: 0;
         left: 0;
-        height: 170px;
+        height: 75px;
     }
 }
 
@@ -1274,6 +1284,11 @@ section {
     .header-wrap .notifi-dropdown::before {
         left: 79px;
     }
+
+ .alert-success {
+    width: 100% !important;
+}
+
 }
 
 .header-button {
@@ -1291,7 +1306,7 @@ section {
 
 @media (max-width: 991px) {
     .header-button {
-        margin-top: 30px;
+        margin-top: 0px;
         width: 100%;
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
@@ -1299,6 +1314,25 @@ section {
         -ms-flex-pack: justify;
         justify-content: space-between;
     }
+
+    .account-dropdown .info {
+    padding: 10px !important;
+}
+
+.formfirstpart {
+    box-shadow: 0px 0px 0px 0px #000 !important;
+}
+
+.formfirstpart ul li label , .formfirstpart ul li label input{
+
+}
+
+
+
+
+
+
+
 }
 
 .noti-wrap {
@@ -14677,4 +14711,71 @@ section {
 
 .card-body {
     padding: 10px 0 !important;
+}
+
+.header-button {
+    width: 100%;
+    float: right;
+    right: 0;
+}
+.account-wrap {
+    position: relative;
+    width: 100%;
+    float: right
+}
+
+.account-item {
+    float: right;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-top: .3rem;
+    margin-left: -1.25rem;
+    left: 0 !important;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem !important;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+@media (max-width: 991px) {
+     .alert-success {
+    width: 100% !important;
+}
+
+.listActionMenu .btn{
+    padding: 10px 10px !important;
+    font-size: 11px !important;
+    margin-bottom: 5px !important;
+    width: 100% !important;
+}
+
+.statusClass p {
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+    margin-top: 40px !important;
+}
+
+}
+
+
+.form-horizontal {
+    padding: 0 0 70px 0px;
 }
