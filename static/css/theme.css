@@ -14779,3 +14779,7 @@ label {
 .form-horizontal {
     padding: 0 0 70px 0px;
 }
+
+.form-control-label {
+    font-weight: bold !important;
+}

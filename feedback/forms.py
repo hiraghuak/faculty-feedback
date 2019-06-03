@@ -1,12 +1,13 @@
+import datetime
 from django import forms
 from .models import Post
 
 AUDITORY_CHOICES = (
-    ('1', '1 Select'),
-    ('2', '2 Select'),
-    ('3', '3 Select'),
-    ('4', '4 Select'),
-    ('5', '5 Select'),
+    ('1', '1 '),
+    ('2', '2 '),
+    ('3', '3 '),
+    ('4', '4 '),
+    ('5', '5 '),
 )
 
 AREA_OF_INTEREST = (
@@ -18,6 +19,11 @@ AREA_OF_INTEREST = (
     ('Social Religious Linguistic National Identity', 'Social Religious Linguistic National Identity'),
     ('Does Not Induce Interest', 'Does Not Induce Interest'),
 )
+
+DATE_INPUT_FORMATS = [
+    '%d %B %Y', '%d %B, %Y',  # '25 October 2006', '25 October, 2006'
+]
+
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -32,12 +38,17 @@ class PostForm(forms.ModelForm):
             'AREA_OF_INTEREST': forms.CheckboxSelectMultiple(choices=AREA_OF_INTEREST,
                                                              attrs={'class': 'form-check-input'}),
 
+            'FROM_DATE': forms.DateInput(attrs={'type': 'date'}),
+            'TO_DATE': forms.DateInput(attrs={'type': 'date'}),
+
         }
 
         fields = [
             'CLASS_NAME',
             'SUBJECT',
             'NAME_OF_THE_LESSON',
+            'FROM_DATE',
+            'TO_DATE',
 
             'INSTRUCTIONAL_OBJECTIVE_1',
             'INSTRUCTIONAL_OBJECTIVE_2',

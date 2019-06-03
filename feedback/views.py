@@ -87,7 +87,6 @@ def Feedback_create(request):
 class FeedbackUpdate(UpdateView):
     model = Post
     template_name = 'updates/contact_form.html'
-
     fields = [
         'CLASS_NAME',
         'SUBJECT',
@@ -173,5 +172,4 @@ class FeedbackUpdate(UpdateView):
 class FeedbackDelete(DeleteView):
     model = Post
     template_name = 'updates/contact_confirm_delete.html'
-    # fields = "__all__"
     success_url = reverse_lazy('contact_list')

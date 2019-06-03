@@ -204,16 +204,16 @@ class Post(models.Model):
     SUBJECT = models.CharField(max_length=150, choices=SUBJECT_CHOICES, default='', blank=True)
     NAME_OF_THE_LESSON = models.CharField(max_length=500, default='', blank=False)
 
-    # FROM_DATE = models.DateField(default=datetime.date.today)
-    # TO_DATE = models.DateField(default=datetime.date.today)
+    FROM_DATE = models.DateField(default=datetime.date.today)
+    TO_DATE = models.DateField(default=datetime.date.today)
 
     AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='', blank=True)
 
-    INSTRUCTIONAL_OBJECTIVE_1 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500, default='', blank=True)
-    INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500, default='', blank=True)
+    INSTRUCTIONAL_OBJECTIVE_1 = models.CharField(max_length=500,  blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=500, blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=500,  blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500,  blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500,  blank=True, null=True)
 
     STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150, default='', blank=True)
     AUDITORY = models.CharField(max_length=150, default='', blank=True)
