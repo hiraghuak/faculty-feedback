@@ -87,11 +87,20 @@ def Feedback_create(request):
 class FeedbackUpdate(UpdateView):
     model = Post
     template_name = 'updates/contact_form.html'
+
+    widgets = {
+        'FROM_DATE': forms.DateInput(attrs={'type': 'date'}),
+        'TO_DATE': forms.DateInput(attrs={'type': 'date'}),
+
+    }
+
     fields = [
         'CLASS_NAME',
         'SUBJECT',
-
         'NAME_OF_THE_LESSON',
+        'FROM_DATE',
+        'TO_DATE',
+
         'INSTRUCTIONAL_OBJECTIVE_1',
         'INSTRUCTIONAL_OBJECTIVE_2',
         'INSTRUCTIONAL_OBJECTIVE_3',

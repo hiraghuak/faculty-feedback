@@ -196,7 +196,7 @@ class BlogPostQuerySet(models.QuerySet):
 
 
 class Post(models.Model):
-    # MAIN INPUT START
+    # MAIN INPUT START fff
 
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 

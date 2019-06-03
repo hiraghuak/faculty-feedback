@@ -36,7 +36,7 @@ class PostForm(forms.ModelForm):
             'GROSS_MOTOR': forms.RadioSelect(choices=AUDITORY_CHOICES),
 
             'AREA_OF_INTEREST': forms.CheckboxSelectMultiple(choices=AREA_OF_INTEREST,
-                                                             attrs={'class': 'form-check-input'}),
+                                                             attrs={'class': 'form-check-input dd'}),
 
             'FROM_DATE': forms.DateInput(attrs={'type': 'date'}),
             'TO_DATE': forms.DateInput(attrs={'type': 'date'}),
