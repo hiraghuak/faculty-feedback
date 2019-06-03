@@ -30,10 +30,15 @@ class PostForm(forms.ModelForm):
         model = Post
 
         widgets = {
-            'STUDENTS_EXPERIENCE_VISUAL': forms.RadioSelect(choices=AUDITORY_CHOICES),
-            'AUDITORY': forms.RadioSelect(choices=AUDITORY_CHOICES),
-            'FINE_MOTOR': forms.RadioSelect(choices=AUDITORY_CHOICES),
-            'GROSS_MOTOR': forms.RadioSelect(choices=AUDITORY_CHOICES),
+            'STUDENTS_EXPERIENCE_VISUAL': forms.RadioSelect(choices=AUDITORY_CHOICES,
+                                                            attrs={'class': 'form-check-input'}),
+
+            'AUDITORY': forms.RadioSelect(choices=AUDITORY_CHOICES,
+                                          attrs={'class': 'form-check-input'}),
+            'FINE_MOTOR': forms.RadioSelect(choices=AUDITORY_CHOICES,
+                                            attrs={'class': 'form-check-input'}),
+            'GROSS_MOTOR': forms.RadioSelect(choices=AUDITORY_CHOICES,
+                                             attrs={'class': 'form-check-input'}),
 
             'AREA_OF_INTEREST': forms.CheckboxSelectMultiple(choices=AREA_OF_INTEREST,
                                                              attrs={'class': 'form-check-input dd'}),

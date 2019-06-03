@@ -193,6 +193,7 @@ display: block;
 }
 
 
+
 </style>
 
 {% if messages %}
@@ -268,7 +269,6 @@ display: block;
                             </div>
                         </div>
                     </div>
-
 
 
                     <div class="test">
@@ -403,7 +403,18 @@ display: block;
                             <label class=" form-control-label">Students Experience Visual</label>
                         </div>
                         <div class="col-md-8">
-                            <p class="form-control-static"> {{form.STUDENTS_EXPERIENCE_VISUAL}}</p>
+
+                            <div class="form-check-inline form-check">
+
+                                {% for radio in form.STUDENTS_EXPERIENCE_VISUAL %}
+                                <label for="{{ radio.id_for_label }}" class="form-check-label">
+                                    {{ radio.choice_label }}
+                                    <span class="radio">{{ radio.tag }}</span>
+                                </label>
+                                {% endfor %}
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -413,7 +424,17 @@ display: block;
                             <label class=" form-control-label">Auditory</label>
                         </div>
                         <div class="col-md-8">
-                            <p class="form-control-static"> {{form.AUDITORY}}</p>
+
+                            <div class="form-check-inline form-check">
+                                {% for radio in form.AUDITORY %}
+                                <label for="{{ radio.id_for_label }}" class="form-check-label">
+                                    {{ radio.choice_label }}
+                                    <span class="radio">{{ radio.tag }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+
+
                         </div>
                     </div>
 
@@ -422,7 +443,16 @@ display: block;
                             <label class=" form-control-label">Fine Motor</label>
                         </div>
                         <div class="col-md-8">
-                            <p class="form-control-static"> {{form.FINE_MOTOR}}</p>
+
+                            <div class="form-check-inline form-check">
+                                {% for radio in form.FINE_MOTOR %}
+                                <label for="{{ radio.id_for_label }}" class="form-check-label">
+                                    {{ radio.choice_label }}
+                                    <span class="radio">{{ radio.tag }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+
                         </div>
                     </div>
 
@@ -431,7 +461,16 @@ display: block;
                             <label class=" form-control-label">Gross Motor</label>
                         </div>
                         <div class="col-md-8">
-                            <p class="form-control-static"> {{form.GROSS_MOTOR}}</p>
+
+                            <div class="form-check-inline form-check">
+                                {% for radio in form.GROSS_MOTOR %}
+                                <label for="{{ radio.id_for_label }}" class="form-check-label">
+                                    {{ radio.choice_label }}
+                                    <span class="radio">{{ radio.tag }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+
                         </div>
                     </div>
 

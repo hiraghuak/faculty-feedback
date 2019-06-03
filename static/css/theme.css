@@ -1649,8 +1649,9 @@ section {
 }
 
 .navbar-sidebar {
-    padding: 35px;
+    padding: 0px;
     padding-bottom: 0;
+    padding-top: 15px;
 }
 
 .navbar-sidebar .navbar__list li a {
@@ -14795,4 +14796,12 @@ label {
     font-size: 12;
     font-weight: normal;
     text-align: center;
+}
+
+.form-check-inline .form-check-label {
+    margin-right: 20px;
+}
+
+.form-check-inline .form-check-input {
+    margin-left: 6px;
 }
