@@ -55,7 +55,6 @@
     color: #000;
     background: #fff;
     padding: 30px;
-    box-shadow: 0px 0px 10px 4px #0000006b;
     border-radius: 2px;
     border-left: 5px solid #4272d7;
 }
@@ -64,10 +63,7 @@
     color: #000;
     background: #fff;
     padding: 30px;
-    box-shadow: 0px 0px 10px 4px #0000006b;
     border-radius: 2px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-left: 5px solid #fa983a;
 }
 
@@ -75,10 +71,7 @@
     color: #000;
     background: #fff;
     padding: 30px;
-    box-shadow: 0px 0px 10px 4px #0000006b;
     border-radius: 2px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-left: 5px solid #e55039;
 }
 
@@ -86,11 +79,10 @@
     color: #000;
     background: #fff;
     padding: 30px;
-    box-shadow: 0px 0px 10px 4px #0000006b;
     border-radius: 2px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-left: 5px solid #4a69bd;
+    margin-top:15px;
+    margin-bottom:15px;
 }
 
 
@@ -98,10 +90,7 @@
     color: #000;
     background: #fff;
     padding: 30px;
-    box-shadow: 0px 0px 10px 4px #0000006b;
     border-radius: 2px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-left: 5px solid #60a3bc;
 }
 
@@ -109,10 +98,7 @@
     color: #000;
     background: #fff;
     padding: 30px;
-    box-shadow: 0px 0px 10px 4px #0000006b;
     border-radius: 2px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-left: 5px solid #78e08f;
 }
 
@@ -166,6 +152,12 @@ display: block;
    display: none;
 }
 
+.accordingform  {
+    margin-top: 10px;
+}
+.accordingform .card {
+    margin-bottom: 0px;
+}
 
 </style>
 
@@ -382,400 +374,457 @@ display: block;
                     </div>
                 </div>
 
-                <div class="teachingPoint">
-                    <h3 class="center">Teaching Point 1</h3>
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Teaching Point 1</label>
+
+                <div id="accordion" class="accordingform">
+                    <div class="card card1">
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse1">
+                            <a class="card-link">
+                                Teaching Point 1
+                            </a>
                         </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                {{form.TEACHING_POINT_1}}
+                        <div id="collapse1" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="teachingPoint">
+                                    <h3 class="center">Teaching Point 1</h3>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Teaching Point 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                {{form.TEACHING_POINT_1}}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Type of Learning Activity 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_1}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Domain 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.DOMAIN}}</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Activity Details* 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Image If Any 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.IMAGE_IF_ANY}}
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Video Link If Any 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.VIDEO_LINK_IF_ANY}}
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Material Used 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Assessment of Learning Activity 1</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY}}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="card card1">
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse2">
+                            <a class="card-link">
+                                Teaching Point 2
+                            </a>
+                        </div>
+                        <div id="collapse2" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="teachingPoint2">
+                                    <h3 class="center">Teaching Point 2</h3>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Teaching Point 2</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                {{form.TEACHING_POINT_2}}
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Type of Learning Activity 1</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_1}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Type of Learning Activity 2 </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_2}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Domain 1</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.DOMAIN}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Domain 2</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.DOMAIN_2}}</p>
+                                        </div>
+                                    </div>
 
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Activity Details* 1</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Activity Details* 2</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_2}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Image If Any 1</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.IMAGE_IF_ANY}}
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Image If Any</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.IMAGE_IF_ANY_2}}
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Video Link If Any 1</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.VIDEO_LINK_IF_ANY}}
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Video Link If Any 2</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.VIDEO_LINK_IF_ANY_2}}
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Material Used 1</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Material Used 2</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_2}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Assessment of Learning Activity 1</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Assessment of Learning Activity 2</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static">
+                                                {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_2}}</p>
+                                        </div>
+                                    </div>
 
-                </div>
-
-                <div class="teachingPoint2">
-                    <h3 class="center">Teaching Point 2</h3>
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Teaching Point 2</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                {{form.TEACHING_POINT_2}}
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="card card1">
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse3">
+                            <a class="card-link">
+                                Teaching Point 3
+                            </a>
+                        </div>
+                        <div id="collapse3" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="teachingPoint3">
+                                    <h3 class="center">Teaching Point 3</h3>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Teaching Point 3</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                {{form.TEACHING_POINT_3}}
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Type of Learning Activity 2 </label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_2}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Type of Learning Activity 3 </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_3}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Domain 2</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.DOMAIN_2}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Domain 3</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.DOMAIN_3}}</p>
+                                        </div>
+                                    </div>
 
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Activity Details* 2</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_2}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Activity Details* 3</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_3}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Image If Any</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.IMAGE_IF_ANY_2}}
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Image If Any</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.IMAGE_IF_ANY_3}}
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Video Link If Any 2</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.VIDEO_LINK_IF_ANY_2}}
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Video Link If Any 3</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.VIDEO_LINK_IF_ANY_3}}
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Material Used 2</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_2}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Material Used 3</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_3}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Assessment of Learning Activity 2</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_2}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Assessment of Learning Activity 3</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static">
+                                                {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_3}}</p>
+                                        </div>
+                                    </div>
 
-                </div>
-
-                <div class="teachingPoint3">
-                    <h3 class="center">Teaching Point 3</h3>
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Teaching Point 3</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                {{form.TEACHING_POINT_3}}
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="card card1">
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse4">
+                            <a class="card-link">
+                                Teaching Point 4
+                            </a>
+                        </div>
+                        <div id="collapse4" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="teachingPoint4">
+                                    <h3 class="center">Teaching Point 4</h3>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Teaching Point 4</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                {{form.TEACHING_POINT_4}}
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Type of Learning Activity 3 </label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_3}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Type of Learning Activity 4 </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_4}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Domain 3</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.DOMAIN_3}}</p>
-                        </div>
-                    </div>
-
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Activity Details* 3</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_3}}</p>
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Image If Any</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.IMAGE_IF_ANY_3}}
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Video Link If Any 3</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.VIDEO_LINK_IF_ANY_3}}
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Material Used 3</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_3}}</p>
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Assessment of Learning Activity 3</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_3}}</p>
-                        </div>
-                    </div>
-
-                </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Domain 4</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.DOMAIN_4}}</p>
+                                        </div>
+                                    </div>
 
 
-                <div class="teachingPoint4">
-                    <h3 class="center">Teaching Point 4</h3>
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Teaching Point 4</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                {{form.TEACHING_POINT_4}}
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Activity Details* 4</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_4}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Image If Any</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.IMAGE_IF_ANY_4}}
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Video Link If Any 4</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.VIDEO_LINK_IF_ANY_4}}
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Material Used 4</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_4}}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Assessment of Learning Activity 4</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static">
+                                                {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_4}}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="card card1">
+                        <div class="card-header" data-toggle="collapse" data-target="#collapse5">
+                            <a class="card-link">
+                                Teaching Point 5
+                            </a>
+                        </div>
+                        <div id="collapse5" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="teachingPoint5">
+                                    <h3 class="center">Teaching Point 5</h3>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Teaching Point 5</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                {{form.TEACHING_POINT_5}}
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Type of Learning Activity 4 </label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_4}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Type of Learning Activity 5 </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_5}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Domain 4</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.DOMAIN_4}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Domain 5</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.DOMAIN_5}}</p>
+                                        </div>
+                                    </div>
 
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Activity Details* 4</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_4}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Activity Details* 5</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_5}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Image If Any</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.IMAGE_IF_ANY_4}}
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Image If Any</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.IMAGE_IF_ANY_5}}
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Video Link If Any 4</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.VIDEO_LINK_IF_ANY_4}}
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Video Link If Any 5</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{form.VIDEO_LINK_IF_ANY_5}}
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Material Used 4</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_4}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Learning Material Used 5</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_5}}</p>
+                                        </div>
+                                    </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Assessment of Learning Activity 4</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_4}}</p>
-                        </div>
-                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label class=" form-control-label">Assessment of Learning Activity 5</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="form-control-static">
+                                                {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_5}}</p>
+                                        </div>
+                                    </div>
 
-                </div>
-
-                <div class="teachingPoint5">
-                    <h3 class="center">Teaching Point 5</h3>
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Teaching Point 5</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                {{form.TEACHING_POINT_5}}
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Type of Learning Activity 5 </label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.TYPE_OF_LEARNING_ACTIVITY_5}}</p>
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Domain 5</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.DOMAIN_5}}</p>
-                        </div>
-                    </div>
-
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Activity Details* 5</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_ACTIVITY_5}}</p>
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Image If Any</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.IMAGE_IF_ANY_5}}
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Video Link If Any 5</label>
-                        </div>
-                        <div class="col-md-8">
-                            {{form.VIDEO_LINK_IF_ANY_5}}
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Learning Material Used 5</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.LEARNING_MATERIAL_USED_5}}</p>
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-md-4">
-                            <label class=" form-control-label">Assessment of Learning Activity 5</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p class="form-control-static"> {{form.ASSESSMENT_OF_LEARNING_ACTIVITY_5}}</p>
-                        </div>
-                    </div>
-
                 </div>
 
                 <div class="teachingPoint3">

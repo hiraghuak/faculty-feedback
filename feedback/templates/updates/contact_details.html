@@ -13,6 +13,10 @@
         padding: 10px 20px !important;
     }
 
+   .printAre{
+       margin-bottom: 40px;
+        padding-bottom: 80px;
+   }
 </style>
 
 <div class="backBtn clearfix">
@@ -45,7 +49,7 @@
 
                     {% endif %}
 
-                    {% if  object.SUBJECT %}
+                    {% if object.SUBJECT %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Subject</label>
@@ -69,7 +73,6 @@
                         </div>
                     </div>
                     {% endif %}
-
 
 
                     {% if object.FROM_DATE %}
@@ -100,8 +103,6 @@
                     {% endif %}
 
 
-
-
                     <div class="test">
 
                         {% if object.INSTRUCTIONAL_OBJECTIVE_1 %}
@@ -118,7 +119,7 @@
                         </div>
                         {% endif %}
 
-                        {% if  object.INSTRUCTIONAL_OBJECTIVE_2 %}
+                        {% if object.INSTRUCTIONAL_OBJECTIVE_2 %}
                         <div class="row form-group form-row ">
                             <div class="col-md-4">
                                 <label class="form-control-label">Instructional Objective 2</label>
@@ -131,7 +132,7 @@
                         </div>
                         {% endif %}
 
-                        {% if  object.INSTRUCTIONAL_OBJECTIVE_3 %}
+                        {% if object.INSTRUCTIONAL_OBJECTIVE_3 %}
                         <div class="row form-group form-row ">
                             <div class="col-md-4">
                                 <label class="form-control-label">Instructional Objective 3</label>
@@ -144,7 +145,7 @@
                         </div>
                         {% endif %}
 
-                        {% if  object.INSTRUCTIONAL_OBJECTIVE_4 %}
+                        {% if object.INSTRUCTIONAL_OBJECTIVE_4 %}
 
                         <div class="row form-group form-row ">
                             <div class="col-md-4">
@@ -159,7 +160,7 @@
                         </div>
                         {% endif %}
 
-                        {% if  object.INSTRUCTIONAL_OBJECTIVE_5 %}
+                        {% if object.INSTRUCTIONAL_OBJECTIVE_5 %}
                         <div class="row form-group form-row ">
                             <div class="col-md-4">
                                 <label class="form-control-label">Instructional Objective 5</label>
@@ -171,11 +172,11 @@
                                 </div>
                             </div>
                         </div>
-                         {% endif %}
+                        {% endif %}
 
                     </div>
 
-                     {% if  object.AREA_OF_INTEREST %}
+                    {% if object.AREA_OF_INTEREST %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class="form-control-label">Are of Interest</label>
@@ -184,9 +185,9 @@
                             <p class="form-control-static"> {{object.AREA_OF_INTEREST}}</p>
                         </div>
                     </div>
-                     {% endif %}
+                    {% endif %}
 
-                        {% if  object.INTELLIGENCE_USED %}
+                    {% if object.INTELLIGENCE_USED %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Intelligence Used</label>
@@ -198,7 +199,7 @@
                     {% endif %}
 
 
-                    {% if  object.STUDENTS_EXPERIENCE_VISUAL %}
+                    {% if object.STUDENTS_EXPERIENCE_VISUAL %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Students Experience Visual</label>
@@ -209,7 +210,7 @@
                     </div>
                     {% endif %}
 
-                    {% if  object.AUDITORY %}
+                    {% if object.AUDITORY %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Auditory</label>
@@ -221,7 +222,7 @@
                     {% endif %}
 
 
-                     {% if  object.FINE_MOTOR %}
+                    {% if object.FINE_MOTOR %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Fine Motor</label>
@@ -233,7 +234,7 @@
                     {% endif %}
 
 
-                    {% if  object.GROSS_MOTOR %}
+                    {% if object.GROSS_MOTOR %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Gross Motor</label>
@@ -248,7 +249,7 @@
 
                 <div class="teachingPoint">
 
-                    {% if  object.TEACHING_POINT_1 %}
+                    {% if object.TEACHING_POINT_1 %}
                     <h3 class="center">Teaching Point 1</h3>
                     <div class="row form-group">
                         <div class="col-md-4">
@@ -263,7 +264,7 @@
                     {% endif %}
 
 
-                    {% if  object.TYPE_OF_LEARNING_ACTIVITY_1 %}
+                    {% if object.TYPE_OF_LEARNING_ACTIVITY_1 %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Type of Learning Activity 1</label>
@@ -274,7 +275,7 @@
                     </div>
                     {% endif %}
 
-                    {% if  object.DOMAIN %}
+                    {% if object.DOMAIN %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Domain 1</label>
@@ -286,7 +287,7 @@
                     {% endif %}
 
 
-                    {% if  object.LEARNING_ACTIVITY %}
+                    {% if object.LEARNING_ACTIVITY %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Learning Activity Details* 1</label>
@@ -295,7 +296,7 @@
                             <p class="form-control-static"> {{object.LEARNING_ACTIVITY}}</p>
                         </div>
                     </div>
-                     {% endif %}
+                    {% endif %}
 
                     {% if object.IMAGE_IF_ANY %}
                     <div class="row form-group">
@@ -383,7 +384,7 @@
                             <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_2}}</p>
                         </div>
                     </div>
-                     {% endif %}
+                    {% endif %}
 
                     {% if object.DOMAIN_2 %}
                     <div class="row form-group">
@@ -396,7 +397,7 @@
                     </div>
                     {% endif %}
 
-                     {% if object.LEARNING_ACTIVITY_2 %}
+                    {% if object.LEARNING_ACTIVITY_2 %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Learning Activity Details* 2</label>
@@ -405,7 +406,7 @@
                             <p class="form-control-static"> {{object.LEARNING_ACTIVITY_2}}</p>
                         </div>
                     </div>
-                     {% endif %}
+                    {% endif %}
 
                     {% if object.IMAGE_IF_ANY_2 %}
                     <div class="row form-group">
@@ -439,7 +440,7 @@
                     </div>
                     {% endif %}
 
-                {% if object.LEARNING_MATERIAL_USED_2 %}
+                    {% if object.LEARNING_MATERIAL_USED_2 %}
                     <div class="row form-group">
                         <div class="col-md-4">
                             <label class=" form-control-label">Learning Material Used 2</label>
@@ -464,7 +465,7 @@
                 </div>
 
                 <div class="teachingPoint4">
-                     {% if object.TEACHING_POINT_3 %}
+                    {% if object.TEACHING_POINT_3 %}
                     <h3 class="center">Teaching Point 3</h3>
                     <div class="row form-group">
                         <div class="col-md-4">
@@ -509,7 +510,7 @@
                             <p class="form-control-static"> {{object.LEARNING_ACTIVITY_3}}</p>
                         </div>
                     </div>
-                     {% endif %}
+                    {% endif %}
 
                     {% if object.IMAGE_IF_ANY_3 %}
                     <div class="row form-group">
@@ -671,7 +672,7 @@
                             <p class="form-control-static"> {{object.ASSESSMENT_OF_LEARNING_ACTIVITY_4}}</p>
                         </div>
                     </div>
-                     {% endif %}
+                    {% endif %}
 
                 </div>
 
@@ -700,7 +701,7 @@
                             <p class="form-control-static"> {{object.TYPE_OF_LEARNING_ACTIVITY_5}}</p>
                         </div>
                     </div>
-                     {% endif %}
+                    {% endif %}
 
                     {% if object.DOMAIN_5 %}
                     <div class="row form-group">
