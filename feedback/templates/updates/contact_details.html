@@ -35,6 +35,19 @@
             <div class="div">
                 <div class="formfirstpart">
 
+
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label class=" form-control-label"> User Name</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                {{ user.username }}
+                            </div>
+                        </div>
+                    </div>
+
+
                     {% if object.CLASS_NAME %}
                     <div class="row form-group">
                         <div class="col-md-4">
@@ -46,7 +59,6 @@
                             </div>
                         </div>
                     </div>
-
                     {% endif %}
 
                     {% if object.SUBJECT %}
@@ -179,7 +191,7 @@
                     {% if object.AREA_OF_INTEREST %}
                     <div class="row form-group">
                         <div class="col-md-4">
-                            <label class="form-control-label">Are of Interest</label>
+                            <label class="form-control-label">Are of Interest ( Topic can induce interest due to )</label>
                         </div>
                         <div class="col-md-8">
                             <p class="form-control-static"> {{object.AREA_OF_INTEREST}}</p>
