@@ -6,6 +6,9 @@
 {% block content %}
 
 <style>
+.card
+{ margin-top:15px
+margin-bottom:15px;}
 
 .input-group > input {
     position: relative;
@@ -64,7 +67,7 @@
     background: #fff;
     padding: 30px;
     border-radius: 2px;
-    border-left: 5px solid #fa983a;
+
 }
 
 .teachingPoint2 {
@@ -72,7 +75,7 @@
     background: #fff;
     padding: 30px;
     border-radius: 2px;
-    border-left: 5px solid #e55039;
+
 }
 
 .teachingPoint3 {
@@ -80,18 +83,16 @@
     background: #fff;
     padding: 30px;
     border-radius: 2px;
-    border-left: 5px solid #4a69bd;
     margin-top:15px;
     margin-bottom:15px;
 }
-
 
 .teachingPoint4 {
     color: #000;
     background: #fff;
     padding: 30px;
     border-radius: 2px;
-    border-left: 5px solid #60a3bc;
+
 }
 
 .teachingPoint5 {
@@ -99,9 +100,25 @@
     background: #fff;
     padding: 30px;
     border-radius: 2px;
-    border-left: 5px solid #78e08f;
 }
 
+.card1{
+    border-left: 5px solid #fa983a;
+}
+
+.card2{
+    border-left: 5px solid #e55039;
+}
+
+.card3{
+     border-left: 5px solid #4a69bd;
+}
+.card4{
+     border-left: 5px solid #60a3bc;
+}
+.card5{
+     border-left: 5px solid #78e08f;
+}
 
 .center {
     font-size: 20px;
@@ -158,6 +175,17 @@ display: block;
 .accordingform .card {
     margin-bottom: 0px;
 }
+
+.card-link  {
+    color: #007bff !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 0px 0 !important;
+}
+
 
 </style>
 
@@ -377,15 +405,15 @@ display: block;
 
                 <div id="accordion" class="accordingform">
                     <div class="card card1">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse1">
-                            <a class="card-link">
+                        <div class="card-header" >
+                            <a class="card-link" data-toggle="collapse" data-target="#collapse1">
                                 Teaching Point 1
                             </a>
                         </div>
                         <div id="collapse1" class="collapse show" data-parent="#accordion">
                             <div class="card-body">
                                 <div class="teachingPoint">
-                                    <h3 class="center">Teaching Point 1</h3>
+
                                     <div class="row form-group">
                                         <div class="col-md-4">
                                             <label class=" form-control-label">Teaching Point 1</label>
@@ -465,16 +493,16 @@ display: block;
                             </div>
                         </div>
                     </div>
-                    <div class="card card1">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse2">
-                            <a class="card-link">
+                    <div class="card card2">
+                        <div class="card-header" >
+                            <a class="card-link" data-toggle="collapse" data-target="#collapse2">
                                 Teaching Point 2
                             </a>
                         </div>
                         <div id="collapse2" class="collapse" data-parent="#accordion">
                             <div class="card-body">
                                 <div class="teachingPoint2">
-                                    <h3 class="center">Teaching Point 2</h3>
+
                                     <div class="row form-group">
                                         <div class="col-md-4">
                                             <label class=" form-control-label">Teaching Point 2</label>
@@ -555,16 +583,16 @@ display: block;
                             </div>
                         </div>
                     </div>
-                    <div class="card card1">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse3">
-                            <a class="card-link">
+                    <div class="card card3">
+                        <div class="card-header" >
+                            <a class="card-link" data-toggle="collapse" data-target="#collapse3">
                                 Teaching Point 3
                             </a>
                         </div>
                         <div id="collapse3" class="collapse" data-parent="#accordion">
                             <div class="card-body">
                                 <div class="teachingPoint3">
-                                    <h3 class="center">Teaching Point 3</h3>
+
                                     <div class="row form-group">
                                         <div class="col-md-4">
                                             <label class=" form-control-label">Teaching Point 3</label>
@@ -645,16 +673,16 @@ display: block;
                             </div>
                         </div>
                     </div>
-                    <div class="card card1">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse4">
-                            <a class="card-link">
+                    <div class="card card4">
+                        <div class="card-header" >
+                            <a class="card-link" data-toggle="collapse" data-target="#collapse4">
                                 Teaching Point 4
                             </a>
                         </div>
                         <div id="collapse4" class="collapse" data-parent="#accordion">
                             <div class="card-body">
                                 <div class="teachingPoint4">
-                                    <h3 class="center">Teaching Point 4</h3>
+
                                     <div class="row form-group">
                                         <div class="col-md-4">
                                             <label class=" form-control-label">Teaching Point 4</label>
@@ -735,16 +763,16 @@ display: block;
                             </div>
                         </div>
                     </div>
-                    <div class="card card1">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapse5">
-                            <a class="card-link">
+                    <div class="card card5">
+                        <div class="card-header" >
+                            <a class="card-link" data-toggle="collapse" data-target="#collapse5">
                                 Teaching Point 5
                             </a>
                         </div>
                         <div id="collapse5" class="collapse" data-parent="#accordion">
                             <div class="card-body">
                                 <div class="teachingPoint5">
-                                    <h3 class="center">Teaching Point 5</h3>
+
                                     <div class="row form-group">
                                         <div class="col-md-4">
                                             <label class=" form-control-label">Teaching Point 5</label>

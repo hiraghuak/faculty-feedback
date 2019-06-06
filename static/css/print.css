@@ -5,7 +5,7 @@
 .printAre .col-md-8{
   width: 70% !important;
 }
-
+.backBtn .btn,
 #printThisBtn {
     display: none
 }
@@ -31,3 +31,17 @@ height : 180px;
 .printAre .form-group form-control-static {
     font-size: 15px;
 }
+
+.teachin_title {
+    display: block;
+    background-color: #e5e5e5;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+
+
+
