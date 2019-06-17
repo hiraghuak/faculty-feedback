@@ -6,7 +6,7 @@
 
 <style>
 .table thead th {
-    background-color: #128a4b;
+    background-color: rgba(76, 175, 77, 1);
     color: #fff;
     font-size: 12;
     font-weight: normal;
@@ -64,13 +64,13 @@
 
     <div class="table-responsive table--no-card m-b-30">
 
-        <table class="table table-borderless table-striped table-earning">
+        <table class="table table-borderless table-striped table-earning table-hover">
             <thead>
             <tr>
 
                 <th>User Name</th>
-                <th>Lesson</th>
                 <th>Class</th>
+                <th>Lesson</th>
                 <th>Subject</th>
                 <th>Created On</th>
                 <th>Status</th>
@@ -82,8 +82,8 @@
             {% csrf_token %}
             <tr>
                 <td>{{ contactDetailsall.user }}</td>
-                <td>{{ contactDetailsall.NAME_OF_THE_LESSON }}</td>
                 <td>{{ contactDetailsall.CLASS_NAME }}</td>
+                <td>{{ contactDetailsall.NAME_OF_THE_LESSON }}</td>
                 <td>{{ contactDetailsall.SUBJECT }}</td>
                 <td>{{ contactDetailsall.timestamp }}</td>
                 <td class="statusClass {{contactDetailsall.STATUS}}"> <p> {{contactDetailsall.STATUS}} </p></td>
@@ -113,11 +113,13 @@
             <tr>
 
                 <th>User Name</th>
+                <th>Class</th>
                 <th>Lesson</th>
                 <th>Subject</th>
                 <th>Created On</th>
                 <th>Status</th>
                 <th>Action</th>
+
             </tr>
             </thead>
             <tbody>
@@ -125,6 +127,7 @@
             {% csrf_token %}
             <tr>
                 <td>{{ contactDetails.user }}</td>
+                <td>{{ contactDetails.CLASS_NAME }}</td>
                 <td>{{ contactDetails.NAME_OF_THE_LESSON }}</td>
                 <td>{{ contactDetails.SUBJECT }}</td>
                 <td>{{ contactDetails.timestamp }}</td>

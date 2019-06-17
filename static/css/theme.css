@@ -289,7 +289,7 @@ section {
 
 .page-container {
     background: #e5e5e5;
-    padding-left: 300px;
+    padding-left: 150px;
 }
 
 @media (max-width: 991px) {
@@ -319,6 +319,7 @@ section {
 .main-content {
     padding-top: 116px;
     min-height: 100vh;
+    padding-bottom: 30px;
 }
 
 @media (max-width: 991px) {
@@ -1189,7 +1190,7 @@ section {
     position: fixed;
     top: 0;
     right: 0;
-    left: 300px;
+    left: 150px;
     height: 75px;
     z-index: 3;
 }
@@ -1601,7 +1602,7 @@ section {
 }
 
 .menu-sidebar {
-    width: 300px;
+    width: 150px;
     position: fixed;
     left: 0;
     top: 0;
@@ -1656,9 +1657,12 @@ section {
 
 .navbar-sidebar .navbar__list li a {
     display: block;
-    color: #00aef0;
+    color: #9c9c9c;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.navbar-sidebar .navbar__list li a .fas{
     font-size: 16px;
-    padding: 15px 0;
 }
 
 .navbar-sidebar .navbar__list li a i {
@@ -1670,18 +1674,18 @@ section {
 }
 
 .navbar-sidebar .navbar__list li{
-   padding: 0px 10px;
+   padding: 0px 0px;
    text-align: center;
-   border-radius: 4px;
+   border-radius: 0px;
 
 }
 .navbar-sidebar .navbar__list li.active{
- background-color: #f5f5f5;
+ background-color: #4CAF50;
 }
 
 
 .navbar-sidebar .navbar__list li.active > a {
-    color: #128a4b;
+    color: #f7f7f7;
 }
 
 .has-sub {
@@ -14802,4 +14806,8 @@ label {
 
 .form-check-inline .form-check-input {
     margin-left: 6px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0,0,0,.075) !important;
 }

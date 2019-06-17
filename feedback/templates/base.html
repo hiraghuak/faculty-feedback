@@ -79,13 +79,19 @@
                 <ul class="navbar-mobile__list list-unstyled">
                     <li>
                         <a href="{% url 'home' %}">
-                            <i class="fas fa-tachometer-alt"></i>Home</a>
+                            <i class="fas fa-tachometer-alt"></i> Home</a>
                     </li>
 
                     <li>
                         <a href="{% url 'contact_create' %}">
-                            <i class="fas fa-file"></i> Create</a>
+                            <i class="fas fa-file-alt"></i> Create</a>
                     </li>
+
+                    <li>
+                        <a href="{% url 'logout' %}">
+                            <i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+
 
                 </ul>
             </div>
@@ -110,7 +116,12 @@
 
                     <li class="{% if request.resolver_match.url_name == 'contact_create' %}active{% endif %}">
                         <a href="{% url 'contact_create' %}">
-                            <i class="fas fa-file"></i> Create </a>
+                            <i class="fas fa-file-alt"></i> Create</a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'logout' %}">
+                            <i class="fas fa-sign-out-alt"></i> Logout</a>
                     </li>
 
                 </ul>
@@ -184,7 +195,7 @@
                     <div class="login-logo">
                             <img src="{% static 'img/login-logo.png' %}" alt="Faculty Feedback">
                     </div>
-                    <div class="login-form">
+                    <div class="login-form text-center">
                         <p>You are not logged in</p>
                         <a class="btn btn-primary"  href="{% url 'login' %}">login</a>
                     </div>

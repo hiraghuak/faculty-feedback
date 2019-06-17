@@ -200,95 +200,95 @@ class Post(models.Model):
 
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 
-    CLASS_NAME = models.CharField(max_length=150, choices=CLASS_CHOICES, default='', blank=True)
-    SUBJECT = models.CharField(max_length=150, choices=SUBJECT_CHOICES, default='', blank=True)
-    NAME_OF_THE_LESSON = models.CharField(max_length=500, default='', blank=False)
+    CLASS_NAME = models.CharField(max_length=100, choices=CLASS_CHOICES, default='', blank=True)
+    SUBJECT = models.CharField(max_length=100, choices=SUBJECT_CHOICES, default='', blank=True)
+    NAME_OF_THE_LESSON = models.CharField(max_length=100, default='', blank=False)
 
     FROM_DATE = models.DateField(default=datetime.date.today)
     TO_DATE = models.DateField(default=datetime.date.today)
 
     AREA_OF_INTEREST = MultiSelectField(choices=AREA_OF_INTEREST, default='', blank=True)
 
-    INSTRUCTIONAL_OBJECTIVE_1 = models.CharField(max_length=500,  blank=True, null=True)
-    INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=500, blank=True, null=True)
-    INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=500,  blank=True, null=True)
-    INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=500,  blank=True, null=True)
-    INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=500,  blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_1 = models.CharField(max_length=50,  blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_2 = models.CharField(max_length=50, blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_3 = models.CharField(max_length=50,  blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_4 = models.CharField(max_length=50,  blank=True, null=True)
+    INSTRUCTIONAL_OBJECTIVE_5 = models.CharField(max_length=50,  blank=True, null=True)
 
     STUDENTS_EXPERIENCE_VISUAL = models.CharField(max_length=150, default='', blank=True)
-    AUDITORY = models.CharField(max_length=150, default='', blank=True)
-    FINE_MOTOR = models.CharField(max_length=150, default='', blank=True)
-    GROSS_MOTOR = models.CharField(max_length=150, default='', blank=True)
+    AUDITORY = models.CharField(max_length=100, default='', blank=True)
+    FINE_MOTOR = models.CharField(max_length=100, default='', blank=True)
+    GROSS_MOTOR = models.CharField(max_length=100, default='', blank=True)
 
     # TEACHING_POINT_1
-    TEACHING_POINT_1 = models.CharField(max_length=500, default='', blank=True)
-    DOMAIN = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    TYPE_OF_LEARNING_ACTIVITY_1 = models.CharField(max_length=150,
+    TEACHING_POINT_1 = models.CharField(max_length=100, default='', blank=True)
+    DOMAIN = models.CharField(max_length=90, choices=DOMAIN_CHOICES, default='', blank=True)
+    TYPE_OF_LEARNING_ACTIVITY_1 = models.CharField(max_length=100,
                                                    choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='',
                                                    blank=True)
-    LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
+    LEARNING_ACTIVITY = models.CharField(max_length=100, default='', blank=True)
     INTELLIGENCE_USED = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
     IMAGE_IF_ANY = models.ImageField(upload_to='images/', default='', blank=True)
-    VIDEO_LINK_IF_ANY = models.CharField(max_length=1500, default='', blank=True)
+    VIDEO_LINK_IF_ANY = models.CharField(max_length=100, default='', blank=True)
     LEARNING_MATERIAL_USED = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
-    ASSESSMENT_OF_LEARNING_ACTIVITY = models.CharField(max_length=500, default='', blank=True)
+    ASSESSMENT_OF_LEARNING_ACTIVITY = models.CharField(max_length=100, default='', blank=True)
 
     # TEACHING_POINT_2
-    TEACHING_POINT_2 = models.CharField(max_length=500, default='', blank=True)
-    DOMAIN_2 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    TYPE_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=150,
+    TEACHING_POINT_2 = models.CharField(max_length=100, default='', blank=True)
+    DOMAIN_2 = models.CharField(max_length=100, choices=DOMAIN_CHOICES, default='', blank=True)
+    TYPE_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=100,
                                                    choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='',
                                                    blank=True)
-    LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
+    LEARNING_ACTIVITY_2 = models.CharField(max_length=100, default='', blank=True)
     INTELLIGENCE_USED_2 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
     IMAGE_IF_ANY_2 = models.ImageField(upload_to='images/', default='', blank=True)
-    VIDEO_LINK_IF_ANY_2 = models.CharField(max_length=1500, default='', blank=True)
+    VIDEO_LINK_IF_ANY_2 = models.CharField(max_length=100, default='', blank=True)
     LEARNING_MATERIAL_USED_2 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
-    ASSESSMENT_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=500, default='', blank=True)
+    ASSESSMENT_OF_LEARNING_ACTIVITY_2 = models.CharField(max_length=100, default='', blank=True)
 
     # TEACHING_POINT_3
-    TEACHING_POINT_3 = models.CharField(max_length=500, default='', blank=True)
-    DOMAIN_3 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    TYPE_OF_LEARNING_ACTIVITY_3 = models.CharField(max_length=150,
+    TEACHING_POINT_3 = models.CharField(max_length=100, default='', blank=True)
+    DOMAIN_3 = models.CharField(max_length=80, choices=DOMAIN_CHOICES, default='', blank=True)
+    TYPE_OF_LEARNING_ACTIVITY_3 = models.CharField(max_length=100,
                                                    choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='',
                                                    blank=True)
-    LEARNING_ACTIVITY_3 = models.CharField(max_length=500, default='', blank=True)
+    LEARNING_ACTIVITY_3 = models.CharField(max_length=100, default='', blank=True)
     INTELLIGENCE_USED_3 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
     IMAGE_IF_ANY_3 = models.ImageField(upload_to='images/', default='', blank=True)
-    VIDEO_LINK_IF_ANY_3 = models.CharField(max_length=1500, default='', blank=True)
+    VIDEO_LINK_IF_ANY_3 = models.CharField(max_length=100, default='', blank=True)
     LEARNING_MATERIAL_USED_3 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
-    ASSESSMENT_OF_LEARNING_ACTIVITY_3 = models.CharField(max_length=500, default='', blank=True)
+    ASSESSMENT_OF_LEARNING_ACTIVITY_3 = models.CharField(max_length=100, default='', blank=True)
 
     # TEACHING_POINT_4
-    TEACHING_POINT_4 = models.CharField(max_length=500, default='', blank=True)
-    DOMAIN_4 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    TYPE_OF_LEARNING_ACTIVITY_4 = models.CharField(max_length=150,
+    TEACHING_POINT_4 = models.CharField(max_length=100, default='', blank=True)
+    DOMAIN_4 = models.CharField(max_length=100, choices=DOMAIN_CHOICES, default='', blank=True)
+    TYPE_OF_LEARNING_ACTIVITY_4 = models.CharField(max_length=100,
                                                    choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='',
                                                    blank=True)
-    LEARNING_ACTIVITY_4 = models.CharField(max_length=500, default='', blank=True)
+    LEARNING_ACTIVITY_4 = models.CharField(max_length=100, default='', blank=True)
     INTELLIGENCE_USED_4 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
     IMAGE_IF_ANY_4 = models.ImageField(upload_to='images/', default='', blank=True)
-    VIDEO_LINK_IF_ANY_4 = models.CharField(max_length=1500, default='', blank=True)
+    VIDEO_LINK_IF_ANY_4 = models.CharField(max_length=100, default='', blank=True)
     LEARNING_MATERIAL_USED_4 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
-    ASSESSMENT_OF_LEARNING_ACTIVITY_4 = models.CharField(max_length=500, default='', blank=True)
+    ASSESSMENT_OF_LEARNING_ACTIVITY_4 = models.CharField(max_length=100, default='', blank=True)
 
     # TEACHING_POINT_4
-    TEACHING_POINT_5 = models.CharField(max_length=500, default='', blank=True)
-    DOMAIN_5 = models.CharField(max_length=150, choices=DOMAIN_CHOICES, default='', blank=True)
-    TYPE_OF_LEARNING_ACTIVITY_5 = models.CharField(max_length=150,
+    TEACHING_POINT_5 = models.CharField(max_length=100, default='', blank=True)
+    DOMAIN_5 = models.CharField(max_length=100, choices=DOMAIN_CHOICES, default='', blank=True)
+    TYPE_OF_LEARNING_ACTIVITY_5 = models.CharField(max_length=100,
                                                    choices=TYPE_OF_LEARNING_ACTIVITY_1_CHOICES, default='',
                                                    blank=True)
-    LEARNING_ACTIVITY_5 = models.CharField(max_length=500, default='', blank=True)
+    LEARNING_ACTIVITY_5 = models.CharField(max_length=100, default='', blank=True)
     INTELLIGENCE_USED_5 = MultiSelectField(choices=INTELLIGENCE_USED_CHOICES, default='', blank=True)
     IMAGE_IF_ANY_5 = models.ImageField(upload_to='images/', default='', blank=True)
-    VIDEO_LINK_IF_ANY_5 = models.CharField(max_length=1500, default='', blank=True)
+    VIDEO_LINK_IF_ANY_5 = models.CharField(max_length=100, default='', blank=True)
     LEARNING_MATERIAL_USED_5 = MultiSelectField(choices=LEARNING_MATERIAL_USED_CHOICES, default='', blank=True)
-    ASSESSMENT_OF_LEARNING_ACTIVITY_5 = models.CharField(max_length=500, default='', blank=True)
+    ASSESSMENT_OF_LEARNING_ACTIVITY_5 = models.CharField(max_length=100, default='', blank=True)
 
     # FINAL FORM
-    HOMEWORK = models.TextField(blank=True)
-    COMMENTS = models.TextField(blank=True)
-    STATUS = models.CharField(max_length=150, choices=STATUS_CHOICES, default='Pending', blank=True)
+    HOMEWORK = models.TextField(max_length=500, blank=True)
+    COMMENTS = models.TextField(max_length=500, blank=True)
+    STATUS = models.CharField(max_length=80, choices=STATUS_CHOICES, default='Pending', blank=True)
 
     # Updateded Date&time
     publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
