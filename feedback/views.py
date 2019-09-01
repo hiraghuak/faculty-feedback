@@ -69,7 +69,7 @@ class FeedbackDetail(DetailView):
     template_name = 'updates/contact_details.html'
 
 
-# Crate form
+# Create feedback
 def Feedback_create(request):
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
